@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-background: #0f1015; /* Very dark background */
+  --color-brand-surface: #191a23;    /* App container surface */
+  --color-brand-elevated: #242631;   /* Card surface */
+  --color-brand-border: #ffffff0a;   /* Very subtle white border (5-10% opacity) */
+  --color-brand-text-primary: #f8fafc;
+  --color-brand-text-secondary: #94a3b8;
+
+  --color-status-success: #10b981; /* Green */
+  --color-status-warning: #f59e0b; /* Amber */
+  --color-status-error: #ef4444;   /* Red */
+  --color-status-info: #3b82f6;    /* Blue */
+  
+  --font-sans: 'Rajdhani', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+body {
+  background-color: var(--color-brand-background);
+  color: var(--color-brand-text-primary);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-text-secondary);
+}

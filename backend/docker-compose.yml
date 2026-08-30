@@ -1,0 +1,38 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: sih26006-postgres
+    environment:
+      POSTGRES_USER: sih26006
+      POSTGRES_PASSWORD: sih26006
+      POSTGRES_DB: sih26006
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sih26006 -d sih26006"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    container_name: sih26006-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      NODE_ENV: production
+      DATABASE_URL: postgresql://sih26006:sih26006@postgres:5432/sih26006?schema=public
+      JWT_SECRET: ${JWT_SECRET:-dev-only-change-me-before-production-use}
+      JWT_EXPIRES_IN: 24h
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:5173}
+      LOG_LEVEL: info
+    command: sh -c "npx prisma migrate deploy && node src/server.js"
+
+volumes:
+  postgres_data:

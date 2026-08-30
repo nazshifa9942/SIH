@@ -1,0 +1,311 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+enum Role {
+  PROCUREMENT_MANAGER
+  LOGISTICS_MANAGER
+  ADMIN
+  VIEWER
+}
+
+model User {
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  role         Role     @default(VIEWER)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  cargoRequests CargoRequest[]
+
+  @@map("users")
+}
+
+model CargoRequest {
+  id                String   @id @default(uuid())
+  userId            String   @map("user_id")
+  cargoType         String   @map("cargo_type")
+  quantityMt        Decimal  @map("quantity_mt") 
+  originPortId      String   @map("origin_port_id")
+  destinationPortId String   @map("destination_port_id")
+  requiredDate      DateTime @map("required_date") 
+  contractDuration  String?  @map("contract_duration")
+  status            String   @default("DRAFT")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  user            User             @relation(fields: [userId], references: [id], onDelete: Restrict)
+  originPort      Port             @relation("CargoOriginPort", fields: [originPortId], references: [id], onDelete: Restrict)
+  destinationPort Port             @relation("CargoDestinationPort", fields: [destinationPortId], references: [id], onDelete: Restrict)
+  voyagePlans     VoyagePlan[]
+  recommendations Recommendation[]
+  alerts          Alert[]
+  forecasts       ForecastRecord[]
+  costBreakdowns  CostBreakdown[]
+
+  @@index([userId])
+  @@index([originPortId, destinationPortId])
+  @@index([requiredDate])
+  @@index([status])
+  @@map("cargo_requests")
+}
+
+model Vessel {
+  id                 String  @id @default(uuid())
+  name               String
+  vesselType         String  @map("vessel_type")
+  capacityMt         Decimal @map("capacity_mt") 
+  draftM             Decimal @map("draft_m") 
+  loaM               Decimal @map("loa_m") 
+  beamM              Decimal @map("beam_m") 
+  speedKnots         Decimal? @map("speed_knots") 
+  fuelConsumption    Decimal? @map("fuel_consumption") 
+  dailyCharterCost   Decimal? @map("daily_charter_cost") 
+  availabilityStatus String  @map("availability_status")
+
+  availability VesselAvailability[]
+  voyagePlans  VoyagePlan[]
+
+  @@index([vesselType])
+  @@index([availabilityStatus])
+  @@map("vessels")
+}
+
+model VesselAvailability {
+  id              String    @id @default(uuid())
+  vesselId        String    @map("vessel_id")
+  availableFrom   DateTime  @map("available_from")
+  availableUntil  DateTime? @map("available_until")
+  status          String
+  currentLocation String?   @map("current_location")
+  source          String?
+  observedAt      DateTime  @map("observed_at")
+
+  vessel Vessel @relation(fields: [vesselId], references: [id], onDelete: Cascade)
+
+  @@index([vesselId, availableFrom])
+  @@index([status])
+  @@index([observedAt])
+  @@map("vessel_availability")
+}
+
+model Port {
+  id                    String  @id @default(uuid())
+  name                  String
+  country               String
+  region                String?
+  maxDraftM             Decimal @map("max_draft_m") 
+  maxLoaM               Decimal @map("max_loa_m") 
+  maxBeamM              Decimal @map("max_beam_m") 
+  handlingCapacityMtDay Decimal @map("handling_capacity_mt_day") 
+  berthCapacity         Int     @map("berth_capacity")
+  active                Boolean @default(true)
+
+  cargoOrigins       CargoRequest[]      @relation("CargoOriginPort")
+  cargoDestinations  CargoRequest[]      @relation("CargoDestinationPort")
+  freightOrigins     FreightRate[]       @relation("FreightOriginPort")
+  freightDestinations FreightRate[]      @relation("FreightDestinationPort")
+  congestion         PortCongestion[]
+  voyageOrigins      VoyagePlan[]        @relation("VoyageOriginPort")
+  voyageDestinations VoyagePlan[]        @relation("VoyageDestinationPort")
+
+  @@index([country, region])
+  @@index([active])
+  @@map("ports")
+}
+
+model FreightRate {
+  id              String   @id @default(uuid())
+  observedAt      DateTime @map("observed_at")
+  originPortId    String   @map("origin_port_id")
+  destinationPortId String @map("destination_port_id")
+  vesselType      String   @map("vessel_type")
+  rateValue       Decimal  @map("rate_value") 
+  currency        String
+  rateUnit        String   @map("rate_unit")
+  source          String?
+
+  originPort      Port @relation("FreightOriginPort", fields: [originPortId], references: [id], onDelete: Restrict)
+  destinationPort Port @relation("FreightDestinationPort", fields: [destinationPortId], references: [id], onDelete: Restrict)
+
+  @@index([originPortId, destinationPortId, observedAt])
+  @@index([vesselType, observedAt])
+  @@map("freight_rates")
+}
+
+model FuelPrice {
+  id         String   @id @default(uuid())
+  observedAt DateTime @map("observed_at")
+  fuelType   String   @map("fuel_type")
+  region     String
+  price      Decimal  
+  currency   String
+  source     String?
+
+  @@index([fuelType, region, observedAt])
+  @@index([observedAt])
+  @@map("fuel_prices")
+}
+
+model CommodityPrice {
+  id         String   @id @default(uuid())
+  observedAt DateTime @map("observed_at")
+  commodity  String
+  market     String
+  price      Decimal  
+  currency   String
+  source     String?
+
+  @@index([commodity, market, observedAt])
+  @@index([observedAt])
+  @@map("commodity_prices")
+}
+
+model EconomicIndicator {
+  id            String   @id @default(uuid())
+  observedAt    DateTime @map("observed_at")
+  indicatorName String   @map("indicator_name")
+  value         Decimal  
+  unit          String
+  source        String?
+
+  @@index([indicatorName, observedAt])
+  @@map("economic_indicators")
+}
+
+model PortCongestion {
+  id               String   @id @default(uuid())
+  observedAt       DateTime @map("observed_at")
+  portId           String   @map("port_id")
+  vesselsWaiting   Int      @map("vessels_waiting")
+  avgWaitHours     Decimal  @map("avg_wait_hours") 
+  congestionIndex  Decimal  @map("congestion_index") 
+  source           String?
+
+  port Port @relation(fields: [portId], references: [id], onDelete: Cascade)
+
+  @@index([portId, observedAt])
+  @@map("port_congestion")
+}
+
+model WeatherObservation {
+  id             String   @id @default(uuid())
+  observedAt     DateTime @map("observed_at")
+  location       String
+  windSpeed      Decimal? @map("wind_speed") 
+  rainfall       Decimal? 
+  stormIndicator Boolean  @map("storm_indicator") @default(false)
+  severity       String?
+  source         String?
+
+  @@index([location, observedAt])
+  @@index([observedAt])
+  @@map("weather_observations")
+}
+
+model VoyagePlan {
+  id                 String    @id @default(uuid())
+  cargoRequestId     String    @map("cargo_request_id")
+  vesselId           String    @map("vessel_id")
+  originPortId       String    @map("origin_port_id")
+  destinationPortId  String    @map("destination_port_id")
+  tripNumber         Int       @map("trip_number")
+  plannedQuantityMt  Decimal   @map("planned_quantity_mt") 
+  eta                DateTime?
+  estimatedCost      Decimal?  @map("estimated_cost") 
+  feasibilityStatus  String    @map("feasibility_status")
+
+  cargoRequest    CargoRequest    @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
+  vessel          Vessel          @relation(fields: [vesselId], references: [id], onDelete: Restrict)
+  originPort      Port            @relation("VoyageOriginPort", fields: [originPortId], references: [id], onDelete: Restrict)
+  destinationPort Port            @relation("VoyageDestinationPort", fields: [destinationPortId], references: [id], onDelete: Restrict)
+  costBreakdowns  CostBreakdown[]
+
+  @@index([cargoRequestId])
+  @@index([vesselId])
+  @@index([originPortId, destinationPortId])
+  @@map("voyage_plans")
+}
+
+model Recommendation {
+  id                 String   @id @default(uuid())
+  cargoRequestId     String   @map("cargo_request_id")
+  recommendedAction  String   @map("recommended_action")
+  windowStart        DateTime? @map("window_start")
+  windowEnd          DateTime? @map("window_end")
+  expectedFreight    Decimal?  @map("expected_freight") 
+  estimatedTotalCost Decimal?  @map("estimated_total_cost") 
+  riskLevel          String?   @map("risk_level")
+  confidence         Decimal?  
+  contractStrategy   String?   @map("contract_strategy")
+  vesselPlanJson     Json?     @map("vessel_plan_json")
+  explanation        String?
+  createdAt          DateTime  @default(now()) @map("created_at")
+
+  cargoRequest CargoRequest @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
+
+  @@index([cargoRequestId, createdAt])
+  @@map("recommendations")
+}
+
+model Alert {
+  id                 String    @id @default(uuid())
+  cargoRequestId     String    @map("cargo_request_id")
+  alertType          String    @map("alert_type")
+  severity           String
+  message            String
+  oldRecommendation  String?   @map("old_recommendation")
+  newRecommendation  String?   @map("new_recommendation")
+  triggeredAt        DateTime  @default(now()) @map("triggered_at")
+  acknowledgedAt     DateTime? @map("acknowledged_at")
+
+  cargoRequest CargoRequest @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
+
+  @@index([cargoRequestId, triggeredAt])
+  @@index([severity])
+  @@map("alerts")
+}
+
+model ForecastRecord {
+  id             String   @id @default(uuid())
+  cargoRequestId String   @map("cargo_request_id")
+  modelVersion   String   @map("model_version")
+  forecastJson   Json     @map("forecast_json")
+  confidence     Decimal? 
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  cargoRequest CargoRequest @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
+
+  @@index([cargoRequestId, createdAt])
+  @@index([modelVersion])
+  @@map("forecast_records")
+}
+
+model CostBreakdown {
+  id                 String   @id @default(uuid())
+  cargoRequestId     String   @map("cargo_request_id")
+  voyagePlanId       String?  @map("voyage_plan_id")
+  freightCost        Decimal  @map("freight_cost") 
+  fuelCost           Decimal  @map("fuel_cost") 
+  portCost           Decimal  @map("port_cost") 
+  handlingCost       Decimal  @map("handling_cost") 
+  delayCost          Decimal  @map("delay_cost") 
+  repositioningCost  Decimal  @map("repositioning_cost") 
+  otherCost          Decimal  @map("other_cost") 
+  totalCost          Decimal  @map("total_cost") 
+  createdAt          DateTime @default(now()) @map("created_at")
+
+  cargoRequest CargoRequest @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
+  voyagePlan   VoyagePlan?  @relation(fields: [voyagePlanId], references: [id], onDelete: SetNull)
+
+  @@index([cargoRequestId, createdAt])
+  @@index([voyagePlanId])
+  @@map("cost_breakdowns")
+}

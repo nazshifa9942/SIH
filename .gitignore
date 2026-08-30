@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.local
+coverage/
+logs/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+docs
+.env.example
+structure.txt
