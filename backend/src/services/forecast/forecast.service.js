@@ -151,7 +151,27 @@ async function getForecastByCargoId(cargoRequestId, user) {
     return latestForecast;
 }
 
+async function getForecastHistory(cargoRequestId, user) {
+    const cargo = await prisma.cargoRequest.findUnique({
+        where: { id: cargoRequestId },
+    });
+
+    if (!cargo) {
+        throw new AppError(404, 'NOT_FOUND', 'Cargo request not found');
+    }
+
+    if (!checkForecastAccess(cargo, user)) {
+        throw new AppError(403, 'FORBIDDEN', 'Insufficient permissions to view forecast data for this cargo request');
+    }
+
+    return prisma.forecastRecord.findMany({
+        where: { cargoRequestId },
+        orderBy: { createdAt: 'desc' },
+    });
+}
+
 module.exports = {
     generateForecast,
     getForecastByCargoId,
+    getForecastHistory,
 };

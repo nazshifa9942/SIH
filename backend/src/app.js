@@ -13,7 +13,7 @@ function createApp() {
   app.use(helmet());
   app.use(
     cors({
-      origin: env.corsOrigin,
+      origin: [env.corsOrigin, 'http://localhost:4173', 'http://localhost:5174'],
       credentials: true,
     })
   );

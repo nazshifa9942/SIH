@@ -16,7 +16,7 @@ const updateCargoSchema = Joi.object({
     destinationPortId: Joi.string().uuid().optional(),
     requiredDate: Joi.date().optional(),
     contractDuration: Joi.string().trim().max(100).allow(null, '').optional(),
-    status: Joi.string().trim().max(50).optional(),
+    status: Joi.string().valid('DRAFT', 'ACTIVE', 'PENDING', 'COMPLETED', 'COMMITTED').optional(),
 }).min(1); // must modify at least one field
 
 module.exports = {

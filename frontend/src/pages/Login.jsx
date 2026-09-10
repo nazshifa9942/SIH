@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { login } from '../api/auth';
@@ -15,10 +15,10 @@ export const Login = () => {
   const location = useLocation();
 
   if (user) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || '/dashboard';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,69 +39,74 @@ export const Login = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[var(--color-brand-background)] p-4 relative overflow-hidden">
-      {/* Subtle background grid effect */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-        backgroundSize: '60px 60px',
-      }}></div>
-
-      <div className="w-full max-w-sm relative z-10">
-        <div className="flex flex-col items-center mb-10">
-          <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 shadow-2xl">
-            <Anchor className="h-10 w-10 text-white/80" />
+    <div className="flex min-h-screen flex-col items-center justify-center bg-[var(--color-brand-background)] p-4">
+      <div className="w-full max-w-sm">
+        <div className="mb-8 flex flex-col items-center text-center">
+          <div className="relative mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-[var(--color-gov-navy)]">
+            <div className="tricolor-rule absolute bottom-0 left-0 right-0 rounded-b-lg" />
+            <Anchor className="h-7 w-7 text-white" aria-hidden="true" />
           </div>
-          <h1 className="text-2xl font-bold tracking-[0.25em] text-white uppercase">
-            SIH26006
+          <div className="text-[11px] font-medium uppercase tracking-widest text-[var(--color-brand-text-muted)]">
+            Government of India
+          </div>
+          <h1 className="mt-1 text-base font-semibold text-[var(--color-brand-text-primary)]">
+            Ministry of Ports, Shipping &amp; Waterways
           </h1>
-          <p className="text-[10px] text-[var(--color-brand-text-secondary)] uppercase tracking-[0.3em] mt-2">
-            Freight Command Center
+          <p className="mt-0.5 text-xs text-[var(--color-brand-text-muted)]">
+            Maritime Command Portal — SIH26006
           </p>
         </div>
 
-        <div className="bg-[var(--color-brand-elevated)] rounded-3xl border border-white/10 p-8 shadow-2xl">
-          <form onSubmit={handleSubmit} className="space-y-5">
+        <div className="rounded-lg border border-[var(--color-brand-border)] bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.06)]">
+          <form onSubmit={handleSubmit} className="space-y-4" noValidate={false}>
             {error && (
-              <div className="p-3 text-[11px] rounded-xl bg-[var(--color-status-error)]/10 text-[var(--color-status-error)] border border-[var(--color-status-error)]/20 text-center">
+              <div
+                role="alert"
+                className="rounded-md border border-[#fecdca] bg-[var(--color-status-error-bg)] px-3 py-2 text-[13px] text-[var(--color-status-error)]"
+              >
                 {error}
               </div>
             )}
             <div>
-              <label className="text-[10px] uppercase tracking-widest text-[var(--color-brand-text-secondary)] block mb-2" htmlFor="email">
-                Email
+              <label className="ui-label" htmlFor="email">
+                Official email ID
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 required
-                className="w-full h-12 rounded-xl border border-white/5 bg-black/30 px-4 text-sm text-white focus:outline-none focus:border-white/20 transition-colors placeholder:text-white/20"
-                placeholder="user@sih26006.com"
+                autoComplete="email"
+                className="ui-input"
+                placeholder="name@gov.in"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
-              <label className="text-[10px] uppercase tracking-widest text-[var(--color-brand-text-secondary)] block mb-2" htmlFor="password">
+              <label className="ui-label" htmlFor="password">
                 Password
               </label>
               <input
                 id="password"
+                name="password"
                 type="password"
                 required
-                className="w-full h-12 rounded-xl border border-white/5 bg-black/30 px-4 text-sm text-white focus:outline-none focus:border-white/20 transition-colors placeholder:text-white/20"
+                autoComplete="current-password"
+                className="ui-input"
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <Button type="submit" className="w-full h-12 mt-2" disabled={isLoading}>
-              {isLoading ? 'AUTHENTICATING...' : 'SIGN IN'}
+            <Button type="submit" variant="default" className="w-full" loading={isLoading} disabled={isLoading}>
+              {isLoading ? 'Signing in…' : 'Sign in'}
             </Button>
           </form>
         </div>
 
-        <p className="text-center text-[10px] text-[var(--color-brand-text-secondary)]/50 tracking-widest uppercase mt-8">
-          Enter any credentials to preview UI
+        <p className="mt-6 text-center text-[11px] text-[var(--color-brand-text-muted)]">
+          Authorized government personnel access only
         </p>
       </div>
     </div>

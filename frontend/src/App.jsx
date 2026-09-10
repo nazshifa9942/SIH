@@ -7,22 +7,33 @@ import { CommandDashboard } from './pages/Overview/CommandDashboard';
 import { CargoList } from './pages/Cargo/CargoList';
 import { CargoWorkspace } from './pages/Cargo/Workspace/CargoWorkspace';
 import { VesselList } from './pages/Vessels/VesselList';
+import { PortList } from './pages/Ports/PortList';
+import { MaritimeMapPage } from './pages/Map/MaritimeMapPage';
 import { MarketDashboard } from './pages/Market/MarketDashboard';
 import { AlertsFeed } from './pages/Alerts/AlertsFeed';
+import { AdminDashboard } from './pages/Admin/AdminDashboard';
+import { WhatIfSimulator } from './pages/WhatIf/WhatIfSimulator';
+import { Home } from './pages/Home/Home';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route element={<AppLayout />}>
-            <Route path="/" element={<CommandDashboard />} />
+            <Route path="/dashboard" element={<CommandDashboard />} />
             <Route path="/cargo" element={<CargoList />} />
             <Route path="/cargo/:cargoRequestId/*" element={<CargoWorkspace />} />
             <Route path="/vessels" element={<VesselList />} />
+            <Route path="/ports" element={<PortList />} />
+            <Route path="/map" element={<MaritimeMapPage />} />
             <Route path="/market" element={<MarketDashboard />} />
             <Route path="/alerts" element={<AlertsFeed />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/what-if" element={<WhatIfSimulator />} />
           </Route>
         </Routes>
       </AuthProvider>

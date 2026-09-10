@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 enum Role {
@@ -32,10 +32,10 @@ model CargoRequest {
   id                String   @id @default(uuid())
   userId            String   @map("user_id")
   cargoType         String   @map("cargo_type")
-  quantityMt        Decimal  @map("quantity_mt") 
+  quantityMt        Decimal  @map("quantity_mt")
   originPortId      String   @map("origin_port_id")
   destinationPortId String   @map("destination_port_id")
-  requiredDate      DateTime @map("required_date") 
+  requiredDate      DateTime @map("required_date")
   contractDuration  String?  @map("contract_duration")
   status            String   @default("DRAFT")
   createdAt         DateTime @default(now()) @map("created_at")
@@ -49,6 +49,7 @@ model CargoRequest {
   alerts          Alert[]
   forecasts       ForecastRecord[]
   costBreakdowns  CostBreakdown[]
+  whatIfScenarios WhatIfScenario[]
 
   @@index([userId])
   @@index([originPortId, destinationPortId])
@@ -61,13 +62,13 @@ model Vessel {
   id                 String  @id @default(uuid())
   name               String
   vesselType         String  @map("vessel_type")
-  capacityMt         Decimal @map("capacity_mt") 
-  draftM             Decimal @map("draft_m") 
-  loaM               Decimal @map("loa_m") 
-  beamM              Decimal @map("beam_m") 
-  speedKnots         Decimal? @map("speed_knots") 
-  fuelConsumption    Decimal? @map("fuel_consumption") 
-  dailyCharterCost   Decimal? @map("daily_charter_cost") 
+  capacityMt         Decimal @map("capacity_mt")
+  draftM             Decimal @map("draft_m")
+  loaM               Decimal @map("loa_m")
+  beamM              Decimal @map("beam_m")
+  speedKnots         Decimal? @map("speed_knots")
+  fuelConsumption    Decimal? @map("fuel_consumption")
+  dailyCharterCost   Decimal? @map("daily_charter_cost")
   availabilityStatus String  @map("availability_status")
 
   availability VesselAvailability[]
@@ -101,20 +102,23 @@ model Port {
   name                  String
   country               String
   region                String?
-  maxDraftM             Decimal @map("max_draft_m") 
-  maxLoaM               Decimal @map("max_loa_m") 
-  maxBeamM              Decimal @map("max_beam_m") 
-  handlingCapacityMtDay Decimal @map("handling_capacity_mt_day") 
+  maxDraftM             Decimal @map("max_draft_m")
+  maxLoaM               Decimal @map("max_loa_m")
+  maxBeamM              Decimal @map("max_beam_m")
+  handlingCapacityMtDay Decimal @map("handling_capacity_mt_day")
   berthCapacity         Int     @map("berth_capacity")
   active                Boolean @default(true)
 
-  cargoOrigins       CargoRequest[]      @relation("CargoOriginPort")
-  cargoDestinations  CargoRequest[]      @relation("CargoDestinationPort")
-  freightOrigins     FreightRate[]       @relation("FreightOriginPort")
-  freightDestinations FreightRate[]      @relation("FreightDestinationPort")
+  cargoOrigins       CargoRequest[] @relation("CargoOriginPort")
+  cargoDestinations  CargoRequest[] @relation("CargoDestinationPort")
+  freightOrigins     FreightRate[]  @relation("FreightOriginPort")
+  freightDestinations FreightRate[] @relation("FreightDestinationPort")
   congestion         PortCongestion[]
-  voyageOrigins      VoyagePlan[]        @relation("VoyageOriginPort")
-  voyageDestinations VoyagePlan[]        @relation("VoyageDestinationPort")
+  voyageOrigins      VoyagePlan[]   @relation("VoyageOriginPort")
+  voyageDestinations VoyagePlan[]   @relation("VoyageDestinationPort")
+
+  whatIfOriginScenarios      WhatIfScenario[] @relation("WhatIfOriginPort")
+  whatIfDestinationScenarios WhatIfScenario[] @relation("WhatIfDestinationPort")
 
   @@index([country, region])
   @@index([active])
@@ -122,15 +126,15 @@ model Port {
 }
 
 model FreightRate {
-  id              String   @id @default(uuid())
-  observedAt      DateTime @map("observed_at")
-  originPortId    String   @map("origin_port_id")
-  destinationPortId String @map("destination_port_id")
-  vesselType      String   @map("vessel_type")
-  rateValue       Decimal  @map("rate_value") 
-  currency        String
-  rateUnit        String   @map("rate_unit")
-  source          String?
+  id                String   @id @default(uuid())
+  observedAt        DateTime @map("observed_at")
+  originPortId      String   @map("origin_port_id")
+  destinationPortId String   @map("destination_port_id")
+  vesselType        String   @map("vessel_type")
+  rateValue         Decimal  @map("rate_value")
+  currency          String
+  rateUnit          String   @map("rate_unit")
+  source            String?
 
   originPort      Port @relation("FreightOriginPort", fields: [originPortId], references: [id], onDelete: Restrict)
   destinationPort Port @relation("FreightDestinationPort", fields: [destinationPortId], references: [id], onDelete: Restrict)
@@ -145,7 +149,7 @@ model FuelPrice {
   observedAt DateTime @map("observed_at")
   fuelType   String   @map("fuel_type")
   region     String
-  price      Decimal  
+  price      Decimal
   currency   String
   source     String?
 
@@ -159,7 +163,7 @@ model CommodityPrice {
   observedAt DateTime @map("observed_at")
   commodity  String
   market     String
-  price      Decimal  
+  price      Decimal
   currency   String
   source     String?
 
@@ -172,7 +176,7 @@ model EconomicIndicator {
   id            String   @id @default(uuid())
   observedAt    DateTime @map("observed_at")
   indicatorName String   @map("indicator_name")
-  value         Decimal  
+  value         Decimal
   unit          String
   source        String?
 
@@ -185,8 +189,8 @@ model PortCongestion {
   observedAt       DateTime @map("observed_at")
   portId           String   @map("port_id")
   vesselsWaiting   Int      @map("vessels_waiting")
-  avgWaitHours     Decimal  @map("avg_wait_hours") 
-  congestionIndex  Decimal  @map("congestion_index") 
+  avgWaitHours     Decimal  @map("avg_wait_hours")
+  congestionIndex  Decimal  @map("congestion_index")
   source           String?
 
   port Port @relation(fields: [portId], references: [id], onDelete: Cascade)
@@ -199,8 +203,8 @@ model WeatherObservation {
   id             String   @id @default(uuid())
   observedAt     DateTime @map("observed_at")
   location       String
-  windSpeed      Decimal? @map("wind_speed") 
-  rainfall       Decimal? 
+  windSpeed      Decimal? @map("wind_speed")
+  rainfall       Decimal?
   stormIndicator Boolean  @map("storm_indicator") @default(false)
   severity       String?
   source         String?
@@ -217,9 +221,9 @@ model VoyagePlan {
   originPortId       String    @map("origin_port_id")
   destinationPortId  String    @map("destination_port_id")
   tripNumber         Int       @map("trip_number")
-  plannedQuantityMt  Decimal   @map("planned_quantity_mt") 
+  plannedQuantityMt  Decimal   @map("planned_quantity_mt")
   eta                DateTime?
-  estimatedCost      Decimal?  @map("estimated_cost") 
+  estimatedCost      Decimal?  @map("estimated_cost")
   feasibilityStatus  String    @map("feasibility_status")
 
   cargoRequest    CargoRequest    @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
@@ -240,10 +244,10 @@ model Recommendation {
   recommendedAction  String   @map("recommended_action")
   windowStart        DateTime? @map("window_start")
   windowEnd          DateTime? @map("window_end")
-  expectedFreight    Decimal?  @map("expected_freight") 
-  estimatedTotalCost Decimal?  @map("estimated_total_cost") 
+  expectedFreight    Decimal?  @map("expected_freight")
+  estimatedTotalCost Decimal?  @map("estimated_total_cost")
   riskLevel          String?   @map("risk_level")
-  confidence         Decimal?  
+  confidence         Decimal?
   contractStrategy   String?   @map("contract_strategy")
   vesselPlanJson     Json?     @map("vessel_plan_json")
   explanation        String?
@@ -256,15 +260,15 @@ model Recommendation {
 }
 
 model Alert {
-  id                 String    @id @default(uuid())
-  cargoRequestId     String    @map("cargo_request_id")
-  alertType          String    @map("alert_type")
-  severity           String
-  message            String
-  oldRecommendation  String?   @map("old_recommendation")
-  newRecommendation  String?   @map("new_recommendation")
-  triggeredAt        DateTime  @default(now()) @map("triggered_at")
-  acknowledgedAt     DateTime? @map("acknowledged_at")
+  id                String    @id @default(uuid())
+  cargoRequestId    String    @map("cargo_request_id")
+  alertType         String    @map("alert_type")
+  severity          String
+  message           String
+  oldRecommendation String?   @map("old_recommendation")
+  newRecommendation String?   @map("new_recommendation")
+  triggeredAt       DateTime  @default(now()) @map("triggered_at")
+  acknowledgedAt    DateTime? @map("acknowledged_at")
 
   cargoRequest CargoRequest @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
 
@@ -278,7 +282,7 @@ model ForecastRecord {
   cargoRequestId String   @map("cargo_request_id")
   modelVersion   String   @map("model_version")
   forecastJson   Json     @map("forecast_json")
-  confidence     Decimal? 
+  confidence     Decimal?
   createdAt      DateTime @default(now()) @map("created_at")
 
   cargoRequest CargoRequest @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
@@ -292,14 +296,14 @@ model CostBreakdown {
   id                 String   @id @default(uuid())
   cargoRequestId     String   @map("cargo_request_id")
   voyagePlanId       String?  @map("voyage_plan_id")
-  freightCost        Decimal  @map("freight_cost") 
-  fuelCost           Decimal  @map("fuel_cost") 
-  portCost           Decimal  @map("port_cost") 
-  handlingCost       Decimal  @map("handling_cost") 
-  delayCost          Decimal  @map("delay_cost") 
-  repositioningCost  Decimal  @map("repositioning_cost") 
-  otherCost          Decimal  @map("other_cost") 
-  totalCost          Decimal  @map("total_cost") 
+  freightCost        Decimal  @map("freight_cost")
+  fuelCost           Decimal  @map("fuel_cost")
+  portCost           Decimal  @map("port_cost")
+  handlingCost       Decimal  @map("handling_cost")
+  delayCost          Decimal  @map("delay_cost")
+  repositioningCost  Decimal  @map("repositioning_cost")
+  otherCost          Decimal  @map("other_cost")
+  totalCost          Decimal  @map("total_cost")
   createdAt          DateTime @default(now()) @map("created_at")
 
   cargoRequest CargoRequest @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
@@ -308,4 +312,38 @@ model CostBreakdown {
   @@index([cargoRequestId, createdAt])
   @@index([voyagePlanId])
   @@map("cost_breakdowns")
+}
+
+model WhatIfScenario {
+  id                String   @id @default(uuid())
+  cargoRequestId    String   @map("cargo_request_id")
+  name              String
+  description       String?
+
+  quantityMt        Decimal  @map("quantity_mt")
+  requiredDate      DateTime @map("required_date")
+  originPortId      String   @map("origin_port_id")
+  destinationPortId String   @map("destination_port_id")
+
+  vesselPlanJson    Json?    @map("vessel_plan_json")
+  analysisJson      Json?    @map("analysis_json")
+  forecastJson      Json?    @map("forecast_json")
+  riskJson          Json?    @map("risk_json")
+  optimizationJson  Json?    @map("optimization_json")
+  costJson          Json?    @map("cost_json")
+  recommendationJson Json?   @map("recommendation_json")
+
+  status            String   @default("DRAFT")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  cargoRequest    CargoRequest @relation(fields: [cargoRequestId], references: [id], onDelete: Cascade)
+  originPort      Port         @relation("WhatIfOriginPort", fields: [originPortId], references: [id], onDelete: Restrict)
+  destinationPort Port         @relation("WhatIfDestinationPort", fields: [destinationPortId], references: [id], onDelete: Restrict)
+
+  @@index([cargoRequestId, createdAt])
+  @@index([originPortId])
+  @@index([destinationPortId])
+  @@index([status])
+  @@map("what_if_scenarios")
 }

@@ -19,6 +19,13 @@ router.post(
 );
 
 router.get(
+    '/:cargoRequestId/history',
+    requireAuth,
+    validate(cargoRequestIdParamSchema, 'params'),
+    forecastController.getForecastHistory
+);
+
+router.get(
     '/:cargoRequestId',
     requireAuth,
     validate(cargoRequestIdParamSchema, 'params'),

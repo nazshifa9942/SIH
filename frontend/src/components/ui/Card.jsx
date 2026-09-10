@@ -5,7 +5,7 @@ export const Card = React.forwardRef(({ className, children, ...props }, ref) =>
   <div
     ref={ref}
     className={cn(
-      "rounded-2xl bg-[var(--color-brand-elevated)] text-[var(--color-brand-text-primary)] border border-[var(--color-brand-border)] shadow-md overflow-hidden",
+      'rounded-lg border border-[var(--color-brand-border)] bg-white text-[var(--color-brand-text-primary)] shadow-[0_1px_2px_rgba(16,24,40,0.06)] overflow-hidden',
       className
     )}
     {...props}
@@ -13,27 +13,31 @@ export const Card = React.forwardRef(({ className, children, ...props }, ref) =>
     {children}
   </div>
 ));
-Card.displayName = "Card";
+Card.displayName = 'Card';
 
 export const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1 p-4 pb-2", className)}
+    className={cn('flex flex-col gap-1 px-4 pt-4 pb-3', className)}
     {...props}
   />
 ));
-CardHeader.displayName = "CardHeader";
+CardHeader.displayName = 'CardHeader';
 
 export const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <h3
     ref={ref}
-    className={cn("text-[11px] font-semibold leading-none tracking-[0.15em] text-[var(--color-brand-text-secondary)] uppercase flex items-center gap-2", className)}
+    className={cn(
+      'text-[13px] font-semibold leading-none text-[var(--color-brand-text-primary)] flex items-center gap-2',
+      className
+    )}
     {...props}
   />
 ));
-CardTitle.displayName = "CardTitle";
+CardTitle.displayName = 'CardTitle';
 
 export const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-4 pt-4", className)} {...props} />
+  <div ref={ref} className={cn('px-4 pb-4', className)} {...props} />
 ));
-CardContent.displayName = "CardContent";
+CardContent.displayName = 'CardContent';
+

@@ -9,3 +9,8 @@ export const getForecastByCargoRequestId = async (cargoRequestId) => {
     const response = await api.get(`/forecast/${cargoRequestId}`);
     return response.data.data;
 };
+
+export const getForecastHistory = async (cargoRequestId) => {
+    const response = await api.get(`/forecast/${cargoRequestId}/history`);
+    return response.data.data;
+};

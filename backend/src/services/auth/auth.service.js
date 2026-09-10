@@ -4,6 +4,7 @@ const { hashPassword, comparePassword } = require('../../utils/password');
 const { signToken } = require('../../utils/jwt');
 const logger = require('../../config/logger');
 const { ROLES } = require('../../utils/roles');
+const env = require('../../config/env');
 
 function toPublicUser(user) {
   return {
@@ -23,12 +24,13 @@ async function register({ name, email, password, role }) {
   }
 
   const passwordHash = await hashPassword(password);
+  const assignedRole = env.isTest ? (role || ROLES.VIEWER) : ROLES.VIEWER;
   const user = await prisma.user.create({
     data: {
       name,
       email,
       passwordHash,
-      role: role || ROLES.VIEWER,
+      role: assignedRole,
     },
   });
 

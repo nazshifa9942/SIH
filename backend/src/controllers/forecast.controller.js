@@ -12,7 +12,13 @@ const getForecastByCargoId = asyncHandler(async (req, res) => {
     return sendSuccess(res, result, 'Forecast retrieved successfully');
 });
 
+const getForecastHistory = asyncHandler(async (req, res) => {
+    const result = await forecastService.getForecastHistory(req.params.cargoRequestId, req.user);
+    return sendSuccess(res, result, 'Forecast history retrieved successfully');
+});
+
 module.exports = {
     generateForecast,
     getForecastByCargoId,
+    getForecastHistory,
 };

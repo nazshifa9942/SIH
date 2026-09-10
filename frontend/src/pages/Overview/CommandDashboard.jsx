@@ -1,387 +1,560 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '../../components/ui/Card';
+﻿import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {
+  Ship,
+  TrendingDown,
+  TrendingUp,
+  Activity,
+  ChevronRight,
+  Zap,
+  Clock,
+  ArrowRight,
+  RefreshCw,
+  Compass,
+  MapPin,
+  Info,
+  Box,
+} from 'lucide-react';
+import { Card } from '../../components/ui/Card';
+import { PageHeader, EmptyState, StatusBadge, SkeletonCard, Skeleton } from '../../components/ui/Primitives';
+import { MaritimeHorizon } from '../../components/maritime/MaritimeHorizon';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
 import { getCargoList } from '../../api/cargo';
-import { getFreightMarketData } from '../../api/market';
+import {
+  getFreightMarketData,
+  getFuelMarketData,
+  getCommodityMarketData,
+  getEconomicMarketData,
+} from '../../api/market';
 import { getAlerts } from '../../api/alerts';
-import { 
-  Globe, 
-  Map, 
-  Ship, 
-  Anchor, 
-  AlertTriangle, 
-  CheckCircle, 
-  TrendingDown, 
-  TrendingUp, 
-  Activity,
-  List,
-  Info,
-  ChevronRight,
-  ShieldAlert,
-  Server,
-  Zap,
-  Radio,
-  MapPin,
-  Clock,
-  ArrowRight
-} from 'lucide-react';
+import { getPorts } from '../../api/ports';
+import { getVessels } from '../../api/vessels';
+import { getRecommendationHistory } from '../../api/recommendation';
+import { getRiskByCargoRequestId } from '../../api/risk';
+import { getForecastByCargoRequestId } from '../../api/forecast';
+import { MaritimeMap } from '../../components/map/MaritimeMap';
 
 export const CommandDashboard = () => {
-  const [telemetry, setTelemetry] = useState({
-    freight: 25.11,
-    fuel: 682.40,
-    congestion: 3.2,
-    volatility: 12.4
-  });
-  const [activeCargo, setActiveCargo] = useState(null);
-  const [eventAlerts, setEventAlerts] = useState([]);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    // Fetch cargo, market freight rate, and alerts on mount
-    const fetchData = async () => {
-      try {
-        const cargoData = await getCargoList();
-        if (cargoData && cargoData.length > 0) {
-          setActiveCargo(cargoData[0]);
-        }
-      } catch (err) {
-        console.error('Failed to fetch cargo:', err);
-      }
+  // ── Global Base Data ──
+  const [cargos, setCargos] = useState([]);
+  const [activeCargoId, setActiveCargoId] = useState('');
+  const [ports, setPorts] = useState([]);
+  const [vessels, setVessels] = useState([]);
+  const [alerts, setAlerts] = useState([]);
 
-      try {
-        const marketData = await getFreightMarketData();
-        if (marketData && marketData.length > 0) {
-          const latestRate = Number(marketData[marketData.length - 1].rateValue);
-          setTelemetry(prev => ({ ...prev, freight: latestRate }));
-        }
-      } catch (err) {
-        console.error('Failed to fetch freight market data:', err);
-      }
+  // ── Market Real Data ──
+  const [freightData, setFreightData] = useState([]);
+  const [fuelData, setFuelData] = useState([]);
+  const [commodityData, setCommodityData] = useState([]);
+  const [economicData, setEconomicData] = useState([]);
 
-      try {
-        const alertsData = await getAlerts();
-        if (alertsData && alertsData.length > 0) {
-          setEventAlerts(alertsData.slice(0, 4));
-        }
-      } catch (err) {
-        console.error('Failed to fetch alerts:', err);
-      }
-    };
+  // ── Active Cargo Linked Intelligence ──
+  const [recommendation, setRecommendation] = useState(null);
+  const [riskData, setRiskData] = useState(null);
+  const [forecastData, setForecastData] = useState(null);
 
-    fetchData();
+  // ── Loading & Refresh States ──
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+  const [alertFilter, setAlertFilter] = useState('ALL'); // 'ALL' | 'ALERTS' | 'INFO'
 
-    const interval = setInterval(() => {
-      setTelemetry(prev => ({
-        ...prev,
-        fuel: prev.fuel + (Math.random() * 2 - 1),
-        congestion: Math.max(1.0, Math.min(5.0, prev.congestion + (Math.random() * 0.2 - 0.1))),
-        volatility: Math.max(5.0, Math.min(25.0, prev.volatility + (Math.random() * 0.4 - 0.2)))
-      }));
-    }, 2000);
-    return () => clearInterval(interval);
+  // ── Fetch Global Dashboard Base Data ──
+  const loadDashboardData = useCallback(async (isRefresh = false) => {
+    if (isRefresh) setRefreshing(true);
+    else setLoading(true);
+
+    try {
+      const [
+        cargoList,
+        portList,
+        vesselList,
+        alertList,
+        freightRates,
+        fuelPrices,
+        commodityPrices,
+        economicIndices,
+      ] = await Promise.all([
+        getCargoList().catch(() => []),
+        getPorts().catch(() => []),
+        getVessels().catch(() => []),
+        getAlerts().catch(() => []),
+        getFreightMarketData().catch(() => []),
+        getFuelMarketData().catch(() => []),
+        getCommodityMarketData().catch(() => []),
+        getEconomicMarketData().catch(() => []),
+      ]);
+
+      const cList = Array.isArray(cargoList) ? cargoList : [];
+      setCargos(cList);
+      setPorts(Array.isArray(portList) ? portList : []);
+      setVessels(Array.isArray(vesselList) ? vesselList : []);
+      setAlerts(Array.isArray(alertList) ? alertList : []);
+      setFreightData(Array.isArray(freightRates) ? freightRates : []);
+      setFuelData(Array.isArray(fuelPrices) ? fuelPrices : []);
+      setCommodityData(Array.isArray(commodityPrices) ? commodityPrices : []);
+      setEconomicData(Array.isArray(economicIndices) ? economicIndices : []);
+
+      setActiveCargoId((prev) => prev || (cList.length > 0 ? cList[0].id : ''));
+    } catch (err) {
+      console.error('Failed to load command dashboard data:', err);
+    } finally {
+      setLoading(false);
+      setRefreshing(false);
+    }
   }, []);
 
-  return (
-    <div className="min-h-screen bg-[var(--color-brand-background)] text-[var(--color-brand-text-primary)] p-4 font-sans">
-      <div className="grid grid-cols-12 gap-4 h-full">
-        {/* LEFT COLUMN */}
-        <div className="col-span-3 flex flex-col gap-4">
-          
-          {/* SELECTED CARGO */}
-          <Card className="bg-[var(--color-brand-elevated)] border-white/[0.04] rounded-2xl">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-[11px] uppercase tracking-[0.15em] flex items-center gap-2 text-[var(--color-brand-text-secondary)]">
-                <Ship className="w-4 h-4" />
-                Selected Cargo
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-mono font-bold text-white">
-                    {activeCargo ? activeCargo.cargoType.toUpperCase() : 'IRON ORE'}
-                  </h3>
-                  <p className="font-mono text-sm text-[var(--color-brand-text-secondary)]">
-                    {activeCargo ? `${Number(activeCargo.quantityMt).toLocaleString()} MT` : '55,000 MT'}
-                  </p>
-                </div>
-                <Badge variant="outline" className="border-white/10 flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-status-success)]" />
-                  {activeCargo ? activeCargo.status.toUpperCase() : 'ACTIVE'}
-                </Badge>
-              </div>
-              
-              <div className="space-y-3 mt-6">
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-[var(--color-brand-text-secondary)]" />
-                  <div className="font-mono text-sm flex items-center gap-2">
-                    {activeCargo ? activeCargo.originPort.name.toUpperCase() : 'NEWCASTLE'}
-                    <ArrowRight className="w-3 h-3 text-[var(--color-brand-text-secondary)]" />
-                    {activeCargo ? activeCargo.destinationPort.name.toUpperCase() : 'PARADIP'}
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-[var(--color-brand-text-secondary)]" />
-                  <div className="font-mono text-sm text-[var(--color-brand-text-secondary)]">
-                    Req: {activeCargo
-                      ? new Date(activeCargo.requiredDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-                      : 'OCT 15 - OCT 25'}
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+  useEffect(() => {
+    loadDashboardData();
+  }, [loadDashboardData]);
 
-          {/* PROCUREMENT RECOMMENDATION */}
-          <Card className="bg-[var(--color-brand-elevated)] border-white/[0.04] rounded-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-            <CardHeader className="pb-2">
-              <CardTitle className="text-[11px] uppercase tracking-[0.15em] flex items-center gap-2 text-[var(--color-brand-text-secondary)]">
-                <Zap className="w-4 h-4" />
-                Procurement Recommendation
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col items-center justify-center py-6">
-                <h1 className="text-6xl font-bold font-mono tracking-wider text-orange-500 mb-2">WAIT</h1>
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)]">Confidence</div>
-                  <div className="font-mono text-lg font-bold text-white">85%</div>
-                </div>
-                <p className="text-sm text-center text-[var(--color-brand-text-secondary)] leading-relaxed">
-                  Market indicators suggest freight rates will drop by 3-5% in the next 7 days due to easing port congestion.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+  // ── Fetch Cargo-Specific Intelligence on Active Cargo Change ──
+  useEffect(() => {
+    if (!activeCargoId) return;
 
-          {/* SYSTEM HEALTH */}
-          <Card className="bg-[var(--color-brand-elevated)] border-white/[0.04] rounded-2xl flex-1">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-[11px] uppercase tracking-[0.15em] flex items-center gap-2 text-[var(--color-brand-text-secondary)]">
-                <Activity className="w-4 h-4" />
-                System Health
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="bg-black/20 rounded-xl border border-white/5 p-3">
-                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)] mb-2">Forecast</div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-status-success)]" />
-                    <span className="font-mono text-sm font-bold text-white">9/10</span>
-                  </div>
-                </div>
-                <div className="bg-black/20 rounded-xl border border-white/5 p-3">
-                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)] mb-2">Risk</div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-status-warning)]" />
-                    <span className="font-mono text-sm font-bold text-white">MEDIUM</span>
-                  </div>
-                </div>
-                <div className="bg-black/20 rounded-xl border border-white/5 p-3">
-                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)] mb-2">Optimization</div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-status-success)]" />
-                    <span className="font-mono text-sm font-bold text-white">READY</span>
-                  </div>
-                </div>
-                <div className="bg-black/20 rounded-xl border border-white/5 p-3">
-                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)] mb-2">Data Stream</div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-status-info)]" />
-                    <span className="font-mono text-sm font-bold text-white">ACTIVE</span>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+    let isMounted = true;
+
+    Promise.all([
+      getRecommendationHistory(activeCargoId).catch(() => []),
+      getRiskByCargoRequestId(activeCargoId).catch(() => null),
+      getForecastByCargoRequestId(activeCargoId).catch(() => null),
+    ]).then(([recHistory, riskRes, forecastRes]) => {
+      if (!isMounted) return;
+
+      const latestRec = Array.isArray(recHistory) && recHistory.length > 0 ? recHistory[0] : null;
+      setRecommendation(latestRec);
+      setRiskData(riskRes);
+      setForecastData(forecastRes);
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [activeCargoId]);
+
+  // ── Active Selected Cargo Object ──
+  const activeCargo = useMemo(() => {
+    return cargos.find((c) => c.id === activeCargoId) || cargos[0] || null;
+  }, [cargos, activeCargoId]);
+
+  // ── Real Market Stats Computations ──
+  const marketStats = useMemo(() => {
+    const sortedFreight = [...freightData].sort(
+      (a, b) => new Date(a.observedAt) - new Date(b.observedAt)
+    );
+    const latestFreight = sortedFreight.length > 0 ? Number(sortedFreight[sortedFreight.length - 1].rateValue) : null;
+    const prevFreight = sortedFreight.length > 1 ? Number(sortedFreight[sortedFreight.length - 2].rateValue) : latestFreight;
+    const freightDelta = prevFreight > 0 ? ((latestFreight - prevFreight) / prevFreight) * 100 : 0;
+
+    const sortedFuel = [...fuelData].sort(
+      (a, b) => new Date(a.observedAt) - new Date(b.observedAt)
+    );
+    const latestFuel = sortedFuel.length > 0 ? Number(sortedFuel[sortedFuel.length - 1].price) : null;
+
+    const sortedComm = [...commodityData].sort(
+      (a, b) => new Date(a.observedAt) - new Date(b.observedAt)
+    );
+    const latestComm = sortedComm.length > 0 ? Number(sortedComm[sortedComm.length - 1].price) : null;
+
+    const sortedEcon = [...economicData].sort(
+      (a, b) => new Date(a.observedAt) - new Date(b.observedAt)
+    );
+    const latestEcon = sortedEcon.length > 0 ? Number(sortedEcon[sortedEcon.length - 1].value) : null;
+
+    // Standard deviation volatility calculation across freight data
+    let volatility = null;
+    if (sortedFreight.length > 1) {
+      const vals = sortedFreight.map((f) => Number(f.rateValue) || 0);
+      const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
+      const variance = vals.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / (vals.length - 1);
+      volatility = mean > 0 ? (Math.sqrt(variance) / mean) * 100 : 0;
+    }
+
+    return {
+      latestFreight,
+      freightDelta,
+      latestFuel,
+      latestComm,
+      latestEcon,
+      volatility,
+    };
+  }, [freightData, fuelData, commodityData, economicData]);
+
+  // ── Fleet Statistics ──
+  const fleetStats = useMemo(() => {
+    const total = vessels.length;
+    const available = vessels.filter(
+      (v) => (v.availabilityStatus || v.status)?.toUpperCase() === 'AVAILABLE'
+    ).length;
+    const inTransit = vessels.filter((v) =>
+      ['IN_TRANSIT', 'CHARTERED'].includes((v.availabilityStatus || v.status)?.toUpperCase())
+    ).length;
+    const readinessPct = total > 0 ? Math.round((available / total) * 100) : 0;
+
+    return { total, available, inTransit, readinessPct };
+  }, [vessels]);
+
+  // ── Filtered Alerts ──
+  const filteredAlerts = useMemo(() => {
+    if (alertFilter === 'ALERTS') {
+      return alerts.filter((a) => ['CRITICAL', 'WARNING'].includes(a.severity?.toUpperCase()));
+    }
+    if (alertFilter === 'INFO') {
+      return alerts.filter((a) => a.severity?.toUpperCase() === 'INFO');
+    }
+    return alerts;
+  }, [alerts, alertFilter]);
+
+  // Format Helper
+  const formatNum = (num, decimals = 2) => {
+    if (num === null || num === undefined || isNaN(Number(num))) return 'N/A';
+    return Number(num).toLocaleString('en-US', {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
+  };
+
+  if (loading) {
+    return (
+      <div className="flex flex-col gap-5 w-full">
+        <div className="flex items-start justify-between pb-2 border-b border-[var(--color-brand-border)]">
+          <div><div className="skeleton h-5 w-52" /><div className="skeleton h-3 w-96 mt-2" /></div>
+          <div className="skeleton h-8 w-24" />
         </div>
-
-        {/* CENTER COLUMN */}
-        <div className="col-span-6 flex flex-col relative rounded-2xl overflow-hidden border border-white/[0.04] bg-[#0a0a0f]">
-          {/* Subtle grid background */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSIjZmZmZmZmMDgiIGZpbGw9Im5vbmUiPjxwaGF0IGQ9Ik0wIDQwaDQwVjBIMHoiLz48L2c+PC9zdmc+')] opacity-20 pointer-events-none" />
-          
-          {/* Center Globe */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center opacity-30">
-            <Globe className="w-32 h-32 mb-4 text-[var(--color-brand-text-secondary)]" />
-            <div className="text-[14px] uppercase tracking-[0.3em] text-[var(--color-brand-text-secondary)]">Route Visualization</div>
+        <div className="grid grid-cols-12 gap-5">
+          <div className="col-span-12 lg:col-span-3 flex flex-col gap-5">
+            <SkeletonCard lines={4} /><SkeletonCard lines={3} /><SkeletonCard lines={4} />
           </div>
-
-          {/* Top-left Overlay */}
-          <div className="absolute top-4 left-4 p-4 rounded-xl bg-black/40 backdrop-blur-md border border-white/10 flex flex-col gap-1">
-            <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)]">Active Route</div>
-            <div className="font-mono text-sm font-bold text-white flex items-center gap-2">
-              NEWCASTLE <ArrowRight className="w-3 h-3 text-[var(--color-brand-text-secondary)]" /> PARADIP
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)] mt-2">Est. Time Enroute</div>
-            <div className="font-mono text-lg text-white">14d 08h</div>
-          </div>
-
-          {/* Bottom Timeline Bar Overlay */}
-          <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-black/40 backdrop-blur-md border border-white/10">
-            <div className="flex justify-between items-center relative z-10">
-              {['ORIGIN', 'SEA', 'CANAL', 'SEA', 'DEST'].map((wp, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-2 bg-black/60 px-3 py-1.5 rounded-lg border border-white/5">
-                  <div className={`w-2 h-2 rounded-full ${idx <= 1 ? 'bg-[var(--color-status-info)]' : 'bg-white/20'}`} />
-                  <div className="text-[10px] uppercase tracking-[0.1em] text-white/70">{wp}</div>
-                </div>
-              ))}
-            </div>
-            {/* Connecting line */}
-            <div className="absolute top-7 left-10 right-10 h-px bg-white/10 z-0" />
-            <div className="absolute top-7 left-10 right-1/2 h-px bg-[var(--color-status-info)] z-0" />
-          </div>
-        </div>
-
-        {/* RIGHT COLUMN */}
-        <div className="col-span-3 flex flex-col gap-4">
-          
-          {/* LIVE TELEMETRY */}
-          <Card className="bg-[var(--color-brand-elevated)] border-white/[0.04] rounded-2xl">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-[11px] uppercase tracking-[0.15em] flex items-center gap-2 text-[var(--color-brand-text-secondary)]">
-                <Radio className="w-4 h-4" />
-                Live Telemetry
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4 mt-2">
-                
-                <div className="flex justify-between items-center border-b border-white/[0.04] border-dashed pb-3">
-                  <span className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)]">Freight Rate</span>
-                  <div className="flex items-center gap-2 font-mono font-bold text-white transition-all">
-                    ${telemetry.freight.toFixed(2)}/MT <TrendingDown className="w-3 h-3 text-[var(--color-status-error)]" />
-                  </div>
-                </div>
-
-                <div className="flex justify-between items-center border-b border-white/[0.04] border-dashed pb-3">
-                  <span className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)]">Fuel Price</span>
-                  <div className="flex items-center gap-2 font-mono font-bold text-white transition-all">
-                    ${telemetry.fuel.toFixed(2)}/MT
-                  </div>
-                </div>
-
-                <div className="flex justify-between items-center border-b border-white/[0.04] border-dashed pb-3">
-                  <span className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)]">Port Congestion</span>
-                  <div className="flex items-center gap-2 font-mono font-bold text-[var(--color-status-warning)] transition-all">
-                    {telemetry.congestion.toFixed(1)}
-                  </div>
-                </div>
-
-                <div className="flex justify-between items-center border-b border-white/[0.04] border-dashed pb-3">
-                  <span className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)]">Weather Risk</span>
-                  <div className="flex items-center gap-2 font-mono font-bold text-[var(--color-status-success)]">
-                    LOW
-                  </div>
-                </div>
-
-                <div className="flex justify-between items-center">
-                  <span className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-text-secondary)]">Market Volatility</span>
-                  <div className="flex items-center gap-2 font-mono font-bold text-[var(--color-status-warning)] transition-all">
-                    {telemetry.volatility.toFixed(1)}%
-                  </div>
-                </div>
-
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* EVENT LOG */}
-          <Card className="bg-[var(--color-brand-elevated)] border-white/[0.04] rounded-2xl flex-1 flex flex-col">
-            <CardHeader className="pb-0 border-b border-white/[0.04]">
-              <div className="flex justify-between items-center mb-3">
-                <CardTitle className="text-[11px] uppercase tracking-[0.15em] flex items-center gap-2 text-[var(--color-brand-text-secondary)]">
-                  <List className="w-4 h-4" />
-                  Event Log
-                </CardTitle>
-                <div className="flex gap-2">
-                  <button className="text-[9px] uppercase tracking-wider text-white bg-white/10 px-2 py-1 rounded">ALL</button>
-                  <button className="text-[9px] uppercase tracking-wider text-[var(--color-brand-text-secondary)] hover:text-white px-2 py-1">ALERTS</button>
-                  <button className="text-[9px] uppercase tracking-wider text-[var(--color-brand-text-secondary)] hover:text-white px-2 py-1">INFO</button>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="flex-1 pt-4 overflow-y-auto">
-              <div className="space-y-4">
-              {eventAlerts.length > 0 ? (() => {
-                  const alertMeta = {
-                    WEATHER: { code: 'WTH-ALERT', color: 'var(--color-status-error)' },
-                    MARKET:  { code: 'FRC-UPDATE', color: 'var(--color-status-warning)' },
-                    VESSEL:  { code: 'SYS-SYNC',  color: 'var(--color-status-info)' },
-                    SYSTEM:  { code: 'OPT-COMPL', color: 'var(--color-status-success)' },
-                  };
-                  return eventAlerts.map((a, idx) => {
-                    const meta = alertMeta[a.alertType] || { code: a.alertType, color: 'var(--color-brand-text-secondary)' };
-                    return (
-                      <div key={a.id ?? idx} className="flex gap-3 items-start">
-                        <div className="mt-1 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: meta.color }} />
-                        <div className="flex flex-col gap-1 w-full">
-                          <div className="flex justify-between items-center">
-                            <span className="font-mono text-[10px] text-[var(--color-brand-text-secondary)]">
-                              {new Date(a.triggeredAt).toLocaleTimeString()}
-                            </span>
-                            <span className="font-mono text-[10px]" style={{ color: meta.color }}>{meta.code}</span>
-                          </div>
-                          <p className="text-xs text-white/80 leading-relaxed">{a.message}</p>
-                        </div>
-                      </div>
-                    );
-                  });
-                })() : (
-                <>
-                  <div className="flex gap-3 items-start">
-                    <div className="mt-1 w-1.5 h-1.5 rounded-full bg-[var(--color-status-warning)] shrink-0" />
-                    <div className="flex flex-col gap-1 w-full">
-                      <div className="flex justify-between items-center">
-                        <span className="font-mono text-[10px] text-[var(--color-brand-text-secondary)]">14:22:05Z</span>
-                        <span className="font-mono text-[10px] text-[var(--color-status-warning)]">FRC-UPDATE</span>
-                      </div>
-                      <p className="text-xs text-white/80 leading-relaxed">Capesize index dropped 2%. Re-running optimization model.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3 items-start">
-                    <div className="mt-1 w-1.5 h-1.5 rounded-full bg-[var(--color-status-info)] shrink-0" />
-                    <div className="flex flex-col gap-1 w-full">
-                      <div className="flex justify-between items-center">
-                        <span className="font-mono text-[10px] text-[var(--color-brand-text-secondary)]">13:10:41Z</span>
-                        <span className="font-mono text-[10px] text-[var(--color-status-info)]">SYS-SYNC</span>
-                      </div>
-                      <p className="text-xs text-white/80 leading-relaxed">Port congestion data synced from external provider.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3 items-start">
-                    <div className="mt-1 w-1.5 h-1.5 rounded-full bg-[var(--color-status-success)] shrink-0" />
-                    <div className="flex flex-col gap-1 w-full">
-                      <div className="flex justify-between items-center">
-                        <span className="font-mono text-[10px] text-[var(--color-brand-text-secondary)]">11:45:12Z</span>
-                        <span className="font-mono text-[10px] text-[var(--color-status-success)]">OPT-COMPL</span>
-                      </div>
-                      <p className="text-xs text-white/80 leading-relaxed">Route optimization complete. Found 3 viable vessel candidates.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3 items-start">
-                    <div className="mt-1 w-1.5 h-1.5 rounded-full bg-[var(--color-status-error)] shrink-0" />
-                    <div className="flex flex-col gap-1 w-full">
-                      <div className="flex justify-between items-center">
-                        <span className="font-mono text-[10px] text-[var(--color-brand-text-secondary)]">09:12:33Z</span>
-                        <span className="font-mono text-[10px] text-[var(--color-status-error)]">WTH-ALERT</span>
-                      </div>
-                      <p className="text-xs text-white/80 leading-relaxed">Typhoon warning near South China Sea. Route risk elevated.</p>
-                    </div>
-                  </div>
-                </>
-              )}</div>
-            </CardContent>
-          </Card>
-
+          <div className="col-span-12 lg:col-span-6"><Skeleton className="h-[480px] rounded-lg" /></div>
+          <div className="col-span-12 lg:col-span-3 flex flex-col gap-5"><SkeletonCard lines={5} /><SkeletonCard lines={5} /></div>
         </div>
       </div>
+    );
+  }
+
+  // Recommendation visual attributes (backend-provided)
+  const recAction = recommendation?.recommendedAction || 'MONITOR';
+  const recConfidence = recommendation?.confidence ? Number(recommendation.confidence) : 85;
+  const isLockNow = recAction.toUpperCase().includes('LOCK');
+  const isWait = recAction.toUpperCase().includes('WAIT');
+  const recBand = isLockNow
+    ? 'bg-[var(--color-status-success-bg)] text-[var(--color-status-success)]'
+    : isWait
+    ? 'bg-[var(--color-status-warning-bg)] text-[var(--color-status-warning)]'
+    : 'bg-[var(--color-status-info-bg)] text-[var(--color-status-info)]';
+
+  const overallRisk =
+    riskData?.overallLevel || riskData?.overallRisk || recommendation?.riskLevel || 'LOW';
+  const riskDot =
+    overallRisk === 'LOW' ? 'bg-emerald-500' : overallRisk === 'MEDIUM' ? 'bg-amber-500' : 'bg-red-500';
+
+  const severityDot = (severity) => {
+    const s = String(severity || 'INFO').toUpperCase();
+    if (s === 'CRITICAL') return 'bg-red-500';
+    if (s === 'WARNING') return 'bg-amber-500';
+    return 'bg-blue-500';
+  };
+
+  const requiredDate = activeCargo?.requiredDate || activeCargo?.requiredDeliveryDate;
+
+  return (
+    <div className="flex flex-col gap-5 w-full">
+      {/* ── Page header ──────────────────────────────────────────────── */}
+      <PageHeader
+        title="Command overview"
+        description="Live decision support, maritime GIS intelligence & multi-sector procurement operations"
+        actions={
+          <>
+            <span className="hidden md:inline-flex items-center gap-1.5 rounded-full border border-[#abefc6] bg-[var(--color-status-success-bg)] px-2.5 py-1 text-[11px] font-medium text-[var(--color-status-success)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              Operational telemetry active
+            </span>
+            <div className="hidden lg:flex items-center gap-3 rounded-lg border border-[var(--color-brand-border)] bg-white px-3 py-1.5 text-[12px] shadow-[0_1px_2px_rgba(16,24,40,0.06)]">
+              <span className="text-[var(--color-brand-text-muted)]">Fleet ready</span>
+              <strong className="text-[var(--color-status-success)]">{fleetStats.readinessPct}%</strong>
+              <span className="h-3 w-px bg-[var(--color-brand-border)]" />
+              <span className="text-[var(--color-brand-text-muted)]">Requests</span>
+              <strong className="text-[var(--color-brand-text-primary)]">{cargos.length}</strong>
+              <span className="h-3 w-px bg-[var(--color-brand-border)]" />
+              <span className="text-[var(--color-brand-text-muted)]">Alerts</span>
+              <strong className="text-[var(--color-status-warning)]">{alerts.length}</strong>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => loadDashboardData(true)}
+              disabled={refreshing}
+            >
+              <RefreshCw className={`h-3.5 w-3.5 ${refreshing ? 'animate-spin' : ''}`} />
+              Refresh
+            </Button>
+          </>
+        }
+      />
+      {/* ── Main 3-zone grid ─────────────────────────────────────────── */}
+      <div className="grid grid-cols-12 gap-5">
+        {/* LEFT — operational context */}
+        <div className="col-span-12 lg:col-span-3 flex flex-col gap-5">
+          {/* Selected cargo request */}
+          <Card className="p-4">
+            <div className="flex items-center justify-between gap-2 mb-3">
+              <h2 className="flex items-center gap-2 text-[13px] font-semibold text-[var(--color-brand-text-primary)]">
+                <Ship className="h-4 w-4 text-[var(--color-status-info)]" />
+                Selected cargo request
+              </h2>
+              {activeCargo && (
+                <button
+                  onClick={() => navigate(`/cargo/${activeCargo.id}`)}
+                  className="inline-flex items-center gap-0.5 text-[13px] font-medium text-[var(--color-status-info)] hover:underline"
+                >
+                  Workspace <ChevronRight className="h-3.5 w-3.5" />
+                </button>
+              )}
+            </div>
+
+            {cargos.length > 1 && (
+              <select
+                value={activeCargoId}
+                onChange={(e) => setActiveCargoId(e.target.value)}
+                className="ui-select mb-3"
+                aria-label="Select cargo request"
+              >
+                {cargos.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.cargoType || 'Cargo'} · {Number(c.quantityMt).toLocaleString()} MT
+                  </option>
+                ))}
+              </select>
+            )}
+
+            {activeCargo ? (
+              <div>
+                <div className="flex items-center justify-between gap-2">
+                  <h3 className="text-[15px] font-semibold text-[var(--color-brand-text-primary)] truncate">
+                    {activeCargo.cargoType || 'Cargo'}
+                  </h3>
+                  <StatusBadge status={activeCargo.status} />
+                </div>
+                <p className="mt-0.5 text-[13px] text-[var(--color-brand-text-secondary)]">
+                  {Number(activeCargo.quantityMt).toLocaleString()} MT
+                </p>
+                <div className="mt-2 flex items-center gap-1.5 text-[13px] text-[var(--color-brand-text-primary)]">
+                  <MapPin className="h-3.5 w-3.5 shrink-0 text-[var(--color-status-success)]" />
+                  <span className="truncate font-medium">{activeCargo.originPort?.name || 'Origin'}</span>
+                  <ArrowRight className="h-3 w-3 shrink-0 text-[var(--color-brand-text-muted)]" />
+                  <span className="truncate font-medium">{activeCargo.destinationPort?.name || 'Destination'}</span>
+                </div>
+                {requiredDate && (
+                  <div className="mt-3 flex items-center justify-between border-t border-[var(--color-brand-border)] pt-3 text-[13px]">
+                    <span className="flex items-center gap-1.5 text-[var(--color-brand-text-muted)]">
+                      <Clock className="h-3.5 w-3.5" /> Required
+                    </span>
+                    <span className="font-medium text-[var(--color-brand-text-primary)]">
+                      {new Date(requiredDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                    </span>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <EmptyState
+                icon={Box}
+                title="No active cargo request"
+                description="Select a cargo request to view details and analysis."
+                className="py-6"
+              />
+            )}
+          </Card>
+
+          {/* Procurement recommendation */}
+          <Card className="p-4">
+            <h2 className="flex items-center gap-2 text-[13px] font-semibold text-[var(--color-brand-text-primary)]">
+              <Zap className="h-4 w-4 text-[var(--color-gov-saffron)]" />
+              Procurement recommendation
+            </h2>
+            <div className={`mt-3 flex items-center justify-between rounded-md px-3 py-2.5 ${recBand}`}>
+              <span className="text-lg font-semibold tracking-tight">{recAction}</span>
+              <span className="text-[12px] font-medium">Confidence {recConfidence}%</span>
+            </div>
+            <p className="mt-3 text-[13px] leading-relaxed text-[var(--color-brand-text-secondary)]">
+              {recommendation?.explanation ||
+                'Market analytics indicate freight rate stabilization. Verify vessel scheduling and voyage feasibility.'}
+            </p>
+            {recommendation?.expectedFreight && (
+              <div className="mt-3 flex items-center justify-between border-t border-[var(--color-brand-border)] pt-3 text-[13px]">
+                <span className="text-[var(--color-brand-text-muted)]">Target rate</span>
+                <span className="font-semibold text-[var(--color-brand-text-primary)]">
+                  ${formatNum(recommendation.expectedFreight)}/MT
+                </span>
+              </div>
+            )}
+          </Card>
+
+          {/* Workflow & risk status */}
+          <Card className="p-4 flex-1">
+            <h2 className="flex items-center gap-2 text-[13px] font-semibold text-[var(--color-brand-text-primary)]">
+              <Activity className="h-4 w-4 text-[var(--color-status-info)]" />
+              Workflow &amp; risk status
+            </h2>
+            <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-3">
+              <div>
+                <dt className="text-[11px] text-[var(--color-brand-text-muted)]">Forecast engine</dt>
+                <dd className="mt-0.5 flex items-center gap-1.5 text-[13px] font-medium text-[var(--color-brand-text-primary)]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  {forecastData ? forecastData.modelVersion || 'Calibrated' : 'Calibrated'}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[11px] text-[var(--color-brand-text-muted)]">Voyage risk</dt>
+                <dd className="mt-0.5 flex items-center gap-1.5 text-[13px] font-medium text-[var(--color-brand-text-primary)]">
+                  <span className={`h-1.5 w-1.5 rounded-full ${riskDot}`} />
+                  {String(overallRisk).replace(/_/g, ' ')}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[11px] text-[var(--color-brand-text-muted)]">Fleet match</dt>
+                <dd className="mt-0.5 flex items-center gap-1.5 text-[13px] font-medium text-[var(--color-brand-text-primary)]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+                  {fleetStats.available} ready
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[11px] text-[var(--color-brand-text-muted)]">Market feeds</dt>
+                <dd className="mt-0.5 flex items-center gap-1.5 text-[13px] font-medium text-[var(--color-brand-text-primary)]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-gov-navy)]" />
+                  {freightData.length + fuelData.length} streams
+                </dd>
+              </div>
+            </dl>
+          </Card>
+        </div>
+
+        {/* CENTER — GIS map (visual anchor) */}
+        <div className="col-span-12 lg:col-span-6 flex flex-col gap-3">
+          <div className="flex items-center justify-between">
+            <h2 className="flex items-center gap-2 text-[13px] font-semibold text-[var(--color-brand-text-primary)]">
+              <Compass className="h-4 w-4 text-[var(--color-status-info)]" />
+              Voyage corridor
+            </h2>
+            <button
+              onClick={() => navigate('/map')}
+              className="inline-flex items-center gap-0.5 text-[13px] font-medium text-[var(--color-status-info)] hover:underline"
+            >
+              Full map <ChevronRight className="h-3.5 w-3.5" />
+            </button>
+          </div>
+          <div className="h-[320px] sm:h-[400px] lg:h-[540px] rounded-lg overflow-hidden border border-[var(--color-brand-border)] shadow-[0_1px_3px_rgba(16,24,40,0.10)]">
+            <MaritimeMap
+              originPort={activeCargo?.originPort}
+              destinationPort={activeCargo?.destinationPort}
+              allPorts={ports}
+              vessels={vessels}
+              selectedVessel={vessels[0]}
+              showAlternativeRoutes={true}
+              showAllPorts={true}
+              showFleet={true}
+              showChokepoints={true}
+              className="h-full w-full"
+            />
+          </div>
+        </div>
+
+        {/* RIGHT — live operational intelligence */}
+        <div className="col-span-12 lg:col-span-3 flex flex-col gap-5">
+          {/* Market telemetry */}
+          <Card className="p-4">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-[13px] font-semibold text-[var(--color-brand-text-primary)]">Market telemetry</h2>
+              <button
+                onClick={() => navigate('/market')}
+                className="text-[13px] font-medium text-[var(--color-status-info)] hover:underline"
+              >
+                Details
+              </button>
+            </div>
+            <dl className="divide-y divide-[var(--color-brand-border)]">
+              <div className="flex items-center justify-between py-2">
+                <dt className="text-[13px] text-[var(--color-brand-text-secondary)]">Ocean freight</dt>
+                <dd className="flex items-center gap-1.5 text-[13px] font-semibold text-[var(--color-brand-text-primary)]">
+                  ${formatNum(marketStats.latestFreight)}/MT
+                  {marketStats.freightDelta >= 0 ? (
+                    <TrendingUp className="h-3.5 w-3.5 text-[var(--color-status-success)]" />
+                  ) : (
+                    <TrendingDown className="h-3.5 w-3.5 text-[var(--color-status-error)]" />
+                  )}
+                </dd>
+              </div>
+              <div className="flex items-center justify-between py-2">
+                <dt className="text-[13px] text-[var(--color-brand-text-secondary)]">Bunker (VLSFO)</dt>
+                <dd className="text-[13px] font-semibold text-[var(--color-brand-text-primary)]">${formatNum(marketStats.latestFuel)}/MT</dd>
+              </div>
+              <div className="flex items-center justify-between py-2">
+                <dt className="text-[13px] text-[var(--color-brand-text-secondary)]">Iron ore (62% Fe)</dt>
+                <dd className="text-[13px] font-semibold text-[var(--color-brand-text-primary)]">${formatNum(marketStats.latestComm)}/MT</dd>
+              </div>
+              <div className="flex items-center justify-between py-2">
+                <dt className="text-[13px] text-[var(--color-brand-text-secondary)]">Baltic index / PMI</dt>
+                <dd className="text-[13px] font-semibold text-[var(--color-brand-text-primary)]">{formatNum(marketStats.latestEcon, 1)} pts</dd>
+              </div>
+              <div className="flex items-center justify-between py-2">
+                <dt className="text-[13px] text-[var(--color-brand-text-secondary)]">Freight volatility</dt>
+                <dd className="text-[13px] font-semibold text-[var(--color-brand-text-primary)]">{formatNum(marketStats.volatility, 1)}%</dd>
+              </div>
+            </dl>
+          </Card>
+
+          {/* Live event stream */}
+          <Card className="p-4 flex-1 flex flex-col min-h-0">
+            <div className="flex items-center justify-between gap-2">
+              <h2 className="text-[13px] font-semibold text-[var(--color-brand-text-primary)]">Live event stream</h2>
+              <div className="flex rounded-md border border-[var(--color-brand-border)] bg-[var(--color-brand-inset)] p-0.5" role="group" aria-label="Event filter">
+                {['ALL', 'ALERTS', 'INFO'].map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => setAlertFilter(filter)}
+                    aria-pressed={alertFilter === filter}
+                    className={`rounded px-2 py-0.5 text-[11px] font-medium transition-colors ${
+                      alertFilter === filter
+                        ? 'bg-white text-[var(--color-brand-text-primary)] shadow-sm'
+                        : 'text-[var(--color-brand-text-muted)] hover:text-[var(--color-brand-text-primary)]'
+                    }`}
+                  >
+                    {filter === 'ALL' ? 'All' : filter === 'ALERTS' ? 'Alerts' : 'Info'}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {filteredAlerts.length > 0 ? (
+              <ul className="mt-1 divide-y divide-[var(--color-brand-border)] overflow-y-auto max-h-[300px]">
+                {filteredAlerts.slice(0, 8).map((a, idx) => (
+                  <li key={a.id || idx} className="flex gap-2.5 py-2.5">
+                    <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${severityDot(a.severity)}`} />
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center justify-between gap-2 text-[11px] text-[var(--color-brand-text-muted)]">
+                        <span>{new Date(a.triggeredAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                        <span className="font-medium text-[var(--color-brand-text-secondary)]">{a.alertType || 'System'}</span>
+                      </div>
+                      <p className="mt-0.5 text-[13px] leading-snug text-[var(--color-brand-text-primary)] break-words">{a.message}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <EmptyState
+                icon={Info}
+                title="No active event alerts"
+                description="System is operating normally."
+                className="py-8"
+              />
+            )}
+          </Card>
+        </div>
+      </div>
+
+      {/* ── Maritime horizon signature ───────────────────────────────── */}
+      <MaritimeHorizon />
     </div>
   );
 };

@@ -19,3 +19,7 @@ export const updateCargo = async (id, cargoData) => {
   const response = await api.put(`/cargo/${id}`, cargoData);
   return response.data.data;
 };
+export const deleteCargo = async (id) => {
+  const response = await api.delete(`/cargo/${id}`);
+  return response.data.data;
+};

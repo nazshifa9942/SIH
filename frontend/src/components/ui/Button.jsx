@@ -1,33 +1,55 @@
-import React from 'react';
+﻿import React from 'react';
 import { cn } from '../../utils/cn';
 
-export const Button = React.forwardRef(({ className, variant = "default", size = "default", ...props }, ref) => {
-  const variants = {
-    default: "bg-white/10 text-white hover:bg-white/20 border border-white/5",
-    outline: "border border-[var(--color-brand-border)] bg-transparent hover:bg-white/5",
-    ghost: "bg-transparent hover:bg-white/5 text-[var(--color-brand-text-secondary)] hover:text-white",
-    primary: "bg-[var(--color-status-success)] text-white hover:bg-[var(--color-status-success)]/90",
-    danger: "bg-[var(--color-status-error)] text-white hover:bg-[var(--color-status-error)]/90",
-  };
-  
-  const sizes = {
-    default: "h-10 px-4 py-2",
-    sm: "h-8 rounded-lg px-3 text-[11px] uppercase tracking-wider font-bold",
-    lg: "h-12 rounded-xl px-8",
-    icon: "h-10 w-10",
-  };
+const spinner = (
+  <span
+    className="mr-1.5 inline-block h-3 w-3 animate-spin rounded-full border-[1.5px] border-current border-t-transparent"
+    aria-hidden="true"
+  />
+);
 
-  return (
-    <button
-      ref={ref}
-      className={cn(
-        "inline-flex items-center justify-center rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 disabled:pointer-events-none disabled:opacity-50",
-        variants[variant],
-        sizes[size],
-        className
-      )}
-      {...props}
-    />
-  );
-});
-Button.displayName = "Button";
+export const Button = React.forwardRef(
+  ({ className, variant = 'default', size = 'default', loading = false, disabled, children, ...props }, ref) => {
+    const variants = {
+      default:
+        'bg-[var(--color-gov-navy)] text-white hover:bg-[var(--color-gov-navy-light)] shadow-[0_1px_2px_rgba(16,24,40,0.06)]',
+      primary:
+        'bg-[var(--color-gov-saffron)] text-white hover:bg-[#c25f0a] shadow-[0_1px_2px_rgba(16,24,40,0.06)]',
+      outline:
+        'border border-[var(--color-brand-border-strong)] bg-white text-[var(--color-brand-text-primary)] hover:bg-slate-50',
+      ghost: 'bg-transparent text-[var(--color-brand-text-secondary)] hover:bg-slate-100 hover:text-[var(--color-brand-text-primary)]',
+      navy: 'bg-[var(--color-gov-navy)] text-white hover:bg-[var(--color-gov-navy-light)]',
+      danger: 'bg-[var(--color-status-error)] text-white hover:bg-[#912018]',
+      'outline-danger':
+        'border border-[#f4c7c3] bg-white text-[var(--color-status-error)] hover:bg-[var(--color-status-error-bg)]',
+    };
+
+    const sizes = {
+      default: 'h-9 px-3.5 text-[13px]',
+      sm: 'h-8 px-3 text-xs',
+      lg: 'h-10 px-5 text-sm',
+      icon: 'h-9 w-9',
+    };
+
+    return (
+      <button
+        ref={ref}
+        disabled={disabled || loading}
+        className={cn(
+          'inline-flex items-center justify-center gap-1.5 rounded-md text-[13px] font-medium transition-colors',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-status-info)]/40 focus-visible:ring-offset-1',
+          'disabled:pointer-events-none disabled:opacity-50',
+          variants[variant],
+          sizes[size],
+          className
+        )}
+        {...props}
+      >
+        {loading && spinner}
+        {children}
+      </button>
+    );
+  }
+);
+Button.displayName = 'Button';
+

@@ -1,45 +1,349 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
+
+/* Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+   SIH26006 â€” Maritime Freight & Chartering Command Portal
+   Light design system: off-white canvas, white surfaces, hairline borders,
+   navy primary, saffron reserved for primary actions & active states.
+   Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â */
 
 @theme {
-  --color-brand-background: #0f1015; /* Very dark background */
-  --color-brand-surface: #191a23;    /* App container surface */
-  --color-brand-elevated: #242631;   /* Card surface */
-  --color-brand-border: #ffffff0a;   /* Very subtle white border (5-10% opacity) */
-  --color-brand-text-primary: #f8fafc;
-  --color-brand-text-secondary: #94a3b8;
+  /* Surfaces */
+  --color-brand-background: #f5f6f8;
+  --color-brand-surface: #ffffff;
+  --color-brand-elevated: #ffffff;
+  --color-brand-inset: #f8fafc;
+  --color-brand-border: #e2e6ec;
+  --color-brand-border-strong: #cbd5e1;
 
-  --color-status-success: #10b981; /* Green */
-  --color-status-warning: #f59e0b; /* Amber */
-  --color-status-error: #ef4444;   /* Red */
-  --color-status-info: #3b82f6;    /* Blue */
-  
-  --font-sans: 'Rajdhani', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  /* Text */
+  --color-brand-text-primary: #0f1c2e;
+  --color-brand-text-secondary: #47546b;
+  --color-brand-text-muted: #667085;
+
+  /* Identity */
+  --color-gov-navy: #0b2545;
+  --color-gov-navy-light: #134074;
+  --color-gov-saffron: #d96a0b;
+  --color-gov-green: #067647;
+
+  /* Status (fg / bg pairs) */
+  --color-status-success: #067647;
+  --color-status-success-bg: #ecfdf3;
+  --color-status-warning: #b54708;
+  --color-status-warning-bg: #fffaeb;
+  --color-status-error: #b42318;
+  --color-status-error-bg: #fef3f2;
+  --color-status-info: #175cd3;
+  --color-status-info-bg: #eff8ff;
+
+  /* Type */
+  --font-sans: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   background-color: var(--color-brand-background);
   color: var(--color-brand-text-primary);
   font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.5;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smooth: always;
 }
 
-/* Custom scrollbar for dark mode */
+/* Focus ring â€” consistent, visible, restrained */
+:focus-visible {
+  outline: 2px solid var(--color-status-info);
+  outline-offset: 1px;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-brand-surface);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brand-border);
+  background: #d0d5dd;
   border-radius: 4px;
+  border: 2px solid var(--color-brand-background);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-text-secondary);
+  background: #98a2b3;
+}
+
+/* Brand mark accent â€” single thin tricolor rule, used only beside the anchor logo */
+.tricolor-rule {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #f47920 0 33.3%, #ffffff 33.3% 66.6%, #056a36 66.6% 100%);
+}
+
+/* Solid surface primitives (replace former glass utilities) */
+.surface-panel {
+  background: var(--color-brand-surface);
+  border: 1px solid var(--color-brand-border);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+/* â”€â”€â”€ Form primitives â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ui-input,
+.ui-select {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0 0.625rem;
+  background: #ffffff;
+  border: 1px solid var(--color-brand-border-strong);
+  border-radius: 6px;
+  color: var(--color-brand-text-primary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.ui-input::placeholder {
+  color: #98a2b3;
+  font-weight: 400;
+}
+.ui-input:hover,
+.ui-select:hover {
+  border-color: #98a2b3;
+}
+.ui-input:focus,
+.ui-select:focus {
+  border-color: var(--color-gov-navy);
+  box-shadow: 0 0 0 3px rgba(11, 37, 69, 0.1);
+  outline: none;
+}
+.ui-input:disabled,
+.ui-select:disabled {
+  background: #f2f4f7;
+  color: #98a2b3;
+  cursor: not-allowed;
+}
+.ui-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23667085' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  padding-right: 1.75rem;
+  cursor: pointer;
+}
+.ui-label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-brand-text-secondary);
+}
+
+/* â”€â”€â”€ Table primitives â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+.ui-table th {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-brand-text-muted);
+  background: var(--color-brand-inset);
+  border-bottom: 1px solid var(--color-brand-border);
+  white-space: nowrap;
+}
+.ui-table td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid var(--color-brand-border);
+  color: var(--color-brand-text-primary);
+  vertical-align: middle;
+}
+.ui-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.ui-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* â”€â”€â”€ Skeleton loader â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.skeleton {
+  background: linear-gradient(90deg, #eceef1 25%, #f5f6f8 50%, #eceef1 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  border-radius: 4px;
+}
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* â”€â”€â”€ Selective glass â€” small floating surfaces only â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.08);
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(16, 24, 40, 0.12);
+  color: var(--color-brand-text-primary);
+}
+
+.leaflet-popup-content {
+  margin: 10px 14px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+}
+
+.leaflet-tooltip {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.10);
+  color: var(--color-brand-text-primary);
+  font-size: 12px;
+}
+
+.leaflet-tooltip-top:before {
+  border-top-color: rgba(203, 213, 225, 0.9);
+}
+
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.75) !important;
+  color: #667085;
+  font-size: 9px;
+}
+
+.leaflet-control-attribution a {
+  color: #47546b;
+}
+
+/* â”€â”€â”€ Maritime horizon footer (CSS-only, respects reduced motion) â”€â”€â”€â”€â”€â”€ */
+.maritime-horizon {
+  position: relative;
+  overflow: hidden;
+  height: 110px;
+  border-radius: 8px;
+  border: 1px solid var(--color-brand-border);
+  background: linear-gradient(to bottom, #f8fafc 0%, #e7f0f8 45%, #d4e6f4 100%);
+}
+
+.maritime-horizon__sun {
+  position: absolute;
+  top: 18px;
+  right: 14%;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 24px 10px rgba(255, 255, 255, 0.55);
+}
+
+.maritime-horizon__hills {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  opacity: 0.5;
+}
+
+.maritime-horizon__ship {
+  position: absolute;
+  bottom: 44px;
+  left: -140px;
+  animation: ship-sail 60s linear infinite;
+}
+
+.maritime-horizon__wake {
+  position: absolute;
+  bottom: 38px;
+  left: 26px;
+  width: 90px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  animation: wake-fade 4s ease-in-out infinite;
+}
+
+.maritime-horizon__waves {
+  position: absolute;
+  bottom: -4px;
+  left: -50%;
+  width: 200%;
+  height: 40px;
+}
+
+.maritime-horizon__waves--slow {
+  animation: wave-drift 26s linear infinite;
+  opacity: 0.75;
+}
+
+.maritime-horizon__waves--fast {
+  bottom: 0;
+  animation: wave-drift 14s linear infinite reverse;
+  opacity: 0.9;
+}
+
+@keyframes ship-sail {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw - 40px)); }
+}
+
+@keyframes wake-fade {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes wave-drift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .maritime-horizon__ship,
+  .maritime-horizon__waves--slow,
+  .maritime-horizon__waves--fast,
+  .maritime-horizon__wake {
+    animation: none;
+  }
+  .maritime-horizon__ship {
+    left: 62%;
+  }
 }

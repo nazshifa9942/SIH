@@ -91,9 +91,40 @@ async function generateRecommendation(user, data) {
         explanation = 'Forecasted freight rates are stable. Evaluate alternate options.';
     }
 
-    // Rule 8.3 & Rule 8.4: Placeholder risk & cost calculation from mock optimization boundary
+    // Use the latest saved cost and voyage plan when available. The mock plan
+    // remains the fallback for cargo that has not completed optimization yet.
     const optPlan = await planVessels(cargo);
-    const estimatedTotalCost = optPlan.totalEstimatedCost;
+    const [costHistory, voyagePlans] = await Promise.all([
+        prisma.costBreakdown.findMany({
+            where: { cargoRequestId: cargo.id },
+            orderBy: { createdAt: 'desc' },
+        }),
+        prisma.voyagePlan.findMany({
+            where: { cargoRequestId: cargo.id },
+            include: { vessel: true },
+            orderBy: { tripNumber: 'asc' },
+        }),
+    ]);
+    const latestCost = costHistory.find((cost) => cost.voyagePlanId) || null;
+
+    const persistedPlan = voyagePlans.length > 0
+        ? {
+            feasible: voyagePlans.every((plan) => plan.feasibilityStatus === 'FEASIBLE'),
+            recommendedPlan: voyagePlans.map((plan) => ({
+                vesselId: plan.vesselId,
+                vesselName: plan.vessel?.name,
+                tripNumber: plan.tripNumber,
+                quantityMT: Number(plan.plannedQuantityMt),
+            })),
+            numberOfTrips: voyagePlans.length,
+            totalEstimatedCost: latestCost ? Number(latestCost.totalCost) : optPlan.totalEstimatedCost,
+            voyagePlans,
+        }
+        : optPlan;
+
+    const estimatedTotalCost = latestCost
+        ? Number(latestCost.totalCost)
+        : persistedPlan.totalEstimatedCost;
     const contractStrategy = cargo.contractDuration || 'SPOT';
     const riskLevel = latestForecast.confidence && parseFloat(latestForecast.confidence) < 0.7 ? 'MEDIUM' : 'LOW';
 
@@ -109,7 +140,7 @@ async function generateRecommendation(user, data) {
             riskLevel,
             confidence: latestForecast.confidence,
             contractStrategy,
-            vesselPlanJson: JSON.parse(JSON.stringify(optPlan)),
+            vesselPlanJson: JSON.parse(JSON.stringify(persistedPlan)),
             explanation,
         },
     });
@@ -135,7 +166,11 @@ async function generateRecommendation(user, data) {
         recommendedAction,
     });
 
-    return recommendation;
+    return {
+        ...recommendation,
+        currentFreightRate: currentFreightValue,
+        expectedSavings: Math.max(0, (currentFreightValue - averageForecasted) * parseFloat(cargo.quantityMt)),
+    };
 }
 
 async function getRecommendationById(id, user) {

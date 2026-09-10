@@ -1,0 +1,60 @@
+-- AlterTable
+ALTER TABLE "cargo_requests" ALTER COLUMN "quantity_mt" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "required_date" SET DATA TYPE TIMESTAMP(3);
+
+-- AlterTable
+ALTER TABLE "commodity_prices" ALTER COLUMN "price" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "cost_breakdowns" ALTER COLUMN "freight_cost" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "fuel_cost" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "port_cost" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "handling_cost" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "delay_cost" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "repositioning_cost" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "other_cost" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "total_cost" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "economic_indicators" ALTER COLUMN "value" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "forecast_records" ALTER COLUMN "confidence" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "freight_rates" ALTER COLUMN "rate_value" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "fuel_prices" ALTER COLUMN "price" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "port_congestion" ALTER COLUMN "avg_wait_hours" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "congestion_index" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "ports" ALTER COLUMN "max_draft_m" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "max_loa_m" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "max_beam_m" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "handling_capacity_mt_day" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "recommendations" ALTER COLUMN "expected_freight" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "estimated_total_cost" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "confidence" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "vessels" ALTER COLUMN "capacity_mt" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "draft_m" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "loa_m" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "beam_m" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "speed_knots" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "fuel_consumption" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "daily_charter_cost" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "voyage_plans" ALTER COLUMN "planned_quantity_mt" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "estimated_cost" SET DATA TYPE DECIMAL(65,30);
+
+-- AlterTable
+ALTER TABLE "weather_observations" ALTER COLUMN "wind_speed" SET DATA TYPE DECIMAL(65,30),
+ALTER COLUMN "rainfall" SET DATA TYPE DECIMAL(65,30);

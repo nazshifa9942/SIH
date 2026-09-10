@@ -9,6 +9,16 @@ function checkCargoAccess(cargo, user) {
     return isOwner || isPrivileged;
 }
 
+function validateRequiredDate(requiredDate) {
+    const date = new Date(requiredDate);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (Number.isNaN(date.getTime()) || date < today) {
+        throw new AppError(400, 'VALIDATION_ERROR', 'Required date cannot be in the past');
+    }
+}
+
 async function validatePorts(originPortId, destinationPortId) {
     if (originPortId === destinationPortId) {
         throw new AppError(400, 'VALIDATION_ERROR', 'Origin and destination ports cannot be the same');
@@ -30,6 +40,7 @@ async function validatePorts(originPortId, destinationPortId) {
 
 async function createCargo(userId, data) {
     await validatePorts(data.originPortId, data.destinationPortId);
+    validateRequiredDate(data.requiredDate);
 
     const cargo = await prisma.cargoRequest.create({
         data: {
@@ -126,6 +137,10 @@ async function updateCargo(id, user, data) {
 
     if (data.originPortId || data.destinationPortId) {
         await validatePorts(newOrigin, newDest);
+    }
+
+    if (data.requiredDate) {
+        validateRequiredDate(data.requiredDate);
     }
 
     const updateData = { ...data };
