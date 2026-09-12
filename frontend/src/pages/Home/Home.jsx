@@ -55,7 +55,7 @@ export function Home() {
             <span className="home-identity-copy">
               <span className="home-eyebrow">Official portal</span>
               <strong>Maritime Decision Support</strong>
-              <small>SIH26006 freight and chartering system</small>
+              <small>NAVSETU freight and chartering system</small>
             </span>
           </Link>
           <button className="home-menu-button" type="button" aria-label="Open navigation">
@@ -72,7 +72,7 @@ export function Home() {
       <main id="home-main">
         <section className="home-hero home-container" aria-labelledby="hero-title">
           <div className="home-hero-intro">
-            <p className="home-kicker"><span />SIH26006 NATIONAL MARITIME OPERATIONS</p>
+            <p className="home-kicker"><span />NAVSETU NATIONAL MARITIME OPERATIONS</p>
             <h1 id="hero-title">Better freight decisions, from forecast to charter.</h1>
             <p className="home-hero-description">A decision-support system for procurement and logistics teams managing cargo movement, vessel selection, market uncertainty, and delivery commitments.</p>
             <div className="home-actions">
@@ -117,7 +117,7 @@ export function Home() {
         <section className="home-access" aria-labelledby="access-title"><div className="home-container home-access-inner"><div><p className="home-section-label">Authorized access</p><h2 id="access-title">Continue to the maritime command portal.</h2><p>Access depends on your assigned government role and permissions.</p></div><Link className="home-white-button" to="/login">Sign in <ArrowRight size={16} /></Link></div></section>
       </main>
 
-      <footer className="home-footer" id="home-footer"><div className="home-container"><div className="home-footer-top"><span>Ministry of Ports, Shipping &amp; Waterways</span><span>SIH26006 · Freight forecasting and vessel chartering decision support</span></div><div className="home-footer-bottom"><a href="#home-main">Accessibility</a><a href="mailto:portal-support@ship.gov.in">Portal support</a><span>Version 1.0</span></div></div></footer>
+      <footer className="home-footer" id="home-footer"><div className="home-container"><div className="home-footer-top"><span>Ministry of Ports, Shipping &amp; Waterways</span><span>NAVSETU · Freight forecasting and vessel chartering decision support</span></div><div className="home-footer-bottom"><a href="#home-main">Accessibility</a><a href="mailto:portal-support@ship.gov.in">Portal support</a><span>Version 1.0</span></div></div></footer>
     </div>
   );
 }

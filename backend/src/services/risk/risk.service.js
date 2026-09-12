@@ -147,6 +147,57 @@ async function evaluateWeather(destinationPort) {
  * Descriptive, coefficient-free reporting of route freight rates and the
  * latest forecast spread. UNSPECIFIED: any volatility metric or level mapping.
  */
+// async function evaluateFreightVolatility(cargo, latestForecast) {
+//     const rates = await prisma.freightRate.findMany({
+//         where: {
+//             originPortId: cargo.originPortId,
+//             destinationPortId: cargo.destinationPortId,
+//         },
+//         orderBy: { observedAt: 'desc' },
+//     });
+
+//     const rateValues = rates
+//         .map((rate) => toNumber(rate.rateValue))
+//         .filter((value) => value !== null);
+
+//     let forecastSpread = null;
+//     if (
+//         latestForecast &&
+//         Array.isArray(latestForecast.forecastJson) &&
+//         latestForecast.forecastJson.length > 0
+//     ) {
+//         const predictions = latestForecast.forecastJson
+//             .map((p) => toNumber(p.predictedRate))
+//             .filter((value) => value !== null);
+//         if (predictions.length > 0) {
+//             forecastSpread = {
+//                 min: Math.min(...predictions),
+//                 max: Math.max(...predictions),
+//             };
+//         }
+//     }
+
+//     if (rateValues.length === 0 && !forecastSpread) {
+//         return {
+//             status: 'INSUFFICIENT_DATA',
+//             observationCount: 0,
+//             latestRate: null,
+//             minRate: null,
+//             maxRate: null,
+//             forecastSpread: null,
+//         };
+//     }
+
+//     return {
+//         status: 'EVALUATED',
+//         observationCount: rateValues.length,
+//         latestRate: rateValues.length > 0 ? rateValues[0] : null,
+//         minRate: rateValues.length > 0 ? Math.min(...rateValues) : null,
+//         maxRate: rateValues.length > 0 ? Math.max(...rateValues) : null,
+//         forecastSpread,
+//     };
+// }
+
 async function evaluateFreightVolatility(cargo, latestForecast) {
     const rates = await prisma.freightRate.findMany({
         where: {
@@ -160,30 +211,64 @@ async function evaluateFreightVolatility(cargo, latestForecast) {
         .map((rate) => toNumber(rate.rateValue))
         .filter((value) => value !== null);
 
+    /*
+     * Forecast compatibility:
+     * Supports both:
+     * 1. Current persisted array format:
+     *    [{ date, predictedRate }]
+     * 2. Direct ML object format:
+     *    { prediction, predictedFreightRate }
+     */
+
     let forecastSpread = null;
-    if (
-        latestForecast &&
-        Array.isArray(latestForecast.forecastJson) &&
-        latestForecast.forecastJson.length > 0
-    ) {
-        const predictions = latestForecast.forecastJson
-            .map((p) => toNumber(p.predictedRate))
+    let forecastRate = null;
+
+    const forecastJson = latestForecast?.forecastJson;
+
+    if (Array.isArray(forecastJson) && forecastJson.length > 0) {
+        const predictions = forecastJson
+            .map((p) =>
+                toNumber(
+                    p?.predictedRate ??
+                    p?.predictedFreightRate ??
+                    p?.prediction
+                )
+            )
             .filter((value) => value !== null);
+
         if (predictions.length > 0) {
+            forecastRate = predictions[0];
+
             forecastSpread = {
                 min: Math.min(...predictions),
                 max: Math.max(...predictions),
             };
         }
+    } else if (forecastJson && typeof forecastJson === 'object') {
+        const prediction = toNumber(
+            forecastJson.predictedFreightRate ??
+            forecastJson.prediction ??
+            forecastJson.predictedRate
+        );
+
+        if (prediction !== null) {
+            forecastRate = prediction;
+
+            forecastSpread = {
+                min: prediction,
+                max: prediction,
+            };
+        }
     }
 
-    if (rateValues.length === 0 && !forecastSpread) {
+    if (rateValues.length === 0 && forecastRate === null) {
         return {
             status: 'INSUFFICIENT_DATA',
             observationCount: 0,
             latestRate: null,
             minRate: null,
             maxRate: null,
+            forecastRate: null,
             forecastSpread: null,
         };
     }
@@ -194,6 +279,7 @@ async function evaluateFreightVolatility(cargo, latestForecast) {
         latestRate: rateValues.length > 0 ? rateValues[0] : null,
         minRate: rateValues.length > 0 ? Math.min(...rateValues) : null,
         maxRate: rateValues.length > 0 ? Math.max(...rateValues) : null,
+        forecastRate,
         forecastSpread,
     };
 }

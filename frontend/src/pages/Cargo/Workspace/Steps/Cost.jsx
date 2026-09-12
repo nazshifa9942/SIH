@@ -177,7 +177,7 @@ export const Cost = ({
             VOYAGE PLAN LINKED
           </Badge>
           <span className="text-[var(--color-brand-text-secondary)]">
-            Vessel: <strong className="text-[var(--color-brand-text-primary)]">{vesselName}</strong> · Trips: <strong className="text-[var(--color-status-success)]">{optimizationData?.numberOfTrips || 1}</strong>
+            Vessel: <strong className="text-[var(--color-brand-text-primary)]">{vesselName}</strong> · Trips: <strong className="text-[var(--color-status-success)]">{optimizationData?.recommendedPlan?.length || optimizationData?.numberOfTrips || 1}</strong>
           </span>
         </div>
 
@@ -194,7 +194,7 @@ export const Cost = ({
 
       {cost.meta?.componentStatus && (
         <div className="p-3 rounded-xl border border-amber-500/20 bg-amber-500/5 text-[var(--color-status-warning)] text-xs">
-          Cost basis: freight is computed from forecast or market data. Other components currently use documented zero placeholders until approved tariff, fuel, handling, delay, and repositioning formulas are configured.
+          Cost basis: Freight is calculated using the latest available forecast or market rate. Fuel, port, handling, delay, repositioning, and other charges are currently not included because approved calculation formulas are not configured.
         </div>
       )}
 

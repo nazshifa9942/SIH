@@ -1,0 +1,520 @@
+date,commodity,market_location,price,currency,source,commodity_std,source_type
+2012-04-01,Coal,India - Wholesale Price Index,100.4,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-04-01,Grain,India - Wholesale Price Index,105.366667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-04-01,Iron Ore,India - Wholesale Price Index,100.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2012-05-01,Coal,India - Wholesale Price Index,100.4,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-05-01,Grain,India - Wholesale Price Index,105.266667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-05-01,Iron Ore,India - Wholesale Price Index,104.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2012-06-01,Coal,India - Wholesale Price Index,101.0,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-06-01,Grain,India - Wholesale Price Index,106.5,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-06-01,Iron Ore,India - Wholesale Price Index,106.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2012-07-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-07-01,Grain,India - Wholesale Price Index,108.666667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-07-01,Iron Ore,India - Wholesale Price Index,110.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2012-08-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-08-01,Grain,India - Wholesale Price Index,114.566667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-08-01,Iron Ore,India - Wholesale Price Index,108.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2012-09-01,Iron Ore,India - Wholesale Price Index,106.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2012-09-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-09-01,Grain,India - Wholesale Price Index,116.033333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-10-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-10-01,Grain,India - Wholesale Price Index,116.133333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-10-01,Iron Ore,India - Wholesale Price Index,105.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2012-11-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-11-01,Grain,India - Wholesale Price Index,117.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-11-01,Iron Ore,India - Wholesale Price Index,107.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2012-12-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2012-12-01,Grain,India - Wholesale Price Index,118.8,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2012-12-01,Iron Ore,India - Wholesale Price Index,105.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-01-01,Iron Ore,India - Wholesale Price Index,98.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-01-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-01-01,Grain,India - Wholesale Price Index,120.5,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-02-01,Iron Ore,India - Wholesale Price Index,100.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-02-01,Grain,India - Wholesale Price Index,121.733333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-02-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-03-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-03-01,Grain,India - Wholesale Price Index,122.1,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-03-01,Iron Ore,India - Wholesale Price Index,91.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-04-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-04-01,Grain,India - Wholesale Price Index,122.3,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-04-01,Iron Ore,India - Wholesale Price Index,91.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-05-01,Coal,India - Wholesale Price Index,101.95,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-05-01,Grain,India - Wholesale Price Index,122.333333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-05-01,Iron Ore,India - Wholesale Price Index,90.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-06-01,Coal,India - Wholesale Price Index,103.8,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-06-01,Grain,India - Wholesale Price Index,125.5,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-06-01,Iron Ore,India - Wholesale Price Index,90.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-07-01,Grain,India - Wholesale Price Index,126.333333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-07-01,Iron Ore,India - Wholesale Price Index,87.4,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-07-01,Coal,India - Wholesale Price Index,103.8,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-08-01,Coal,India - Wholesale Price Index,103.8,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-08-01,Grain,India - Wholesale Price Index,126.166667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-08-01,Iron Ore,India - Wholesale Price Index,83.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-09-01,Coal,India - Wholesale Price Index,103.8,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-09-01,Grain,India - Wholesale Price Index,127.4,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-09-01,Iron Ore,India - Wholesale Price Index,82.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-10-01,Grain,India - Wholesale Price Index,124.9,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-10-01,Coal,India - Wholesale Price Index,103.8,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-10-01,Iron Ore,India - Wholesale Price Index,86.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-11-01,Coal,India - Wholesale Price Index,103.8,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2013-11-01,Grain,India - Wholesale Price Index,126.066667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-11-01,Iron Ore,India - Wholesale Price Index,85.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-12-01,Grain,India - Wholesale Price Index,125.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2013-12-01,Iron Ore,India - Wholesale Price Index,94.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2013-12-01,Coal,India - Wholesale Price Index,104.65,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-01-01,Iron Ore,India - Wholesale Price Index,94.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-01-01,Grain,India - Wholesale Price Index,125.233333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-01-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-02-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-02-01,Grain,India - Wholesale Price Index,125.2,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-02-01,Iron Ore,India - Wholesale Price Index,93.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-03-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-03-01,Grain,India - Wholesale Price Index,125.433333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-03-01,Iron Ore,India - Wholesale Price Index,90.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-04-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-04-01,Grain,India - Wholesale Price Index,124.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-04-01,Iron Ore,India - Wholesale Price Index,88.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-05-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-05-01,Grain,India - Wholesale Price Index,123.333333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-05-01,Iron Ore,India - Wholesale Price Index,88.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-06-01,Grain,India - Wholesale Price Index,123.233333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-06-01,Iron Ore,India - Wholesale Price Index,95.4,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-06-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-07-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-07-01,Grain,India - Wholesale Price Index,126.133333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-07-01,Iron Ore,India - Wholesale Price Index,96.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-08-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-08-01,Grain,India - Wholesale Price Index,126.0,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-08-01,Iron Ore,India - Wholesale Price Index,97.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-09-01,Grain,India - Wholesale Price Index,124.233333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-09-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-09-01,Iron Ore,India - Wholesale Price Index,98.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-10-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-10-01,Grain,India - Wholesale Price Index,123.4,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-10-01,Iron Ore,India - Wholesale Price Index,97.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-11-01,Grain,India - Wholesale Price Index,122.966667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-11-01,Iron Ore,India - Wholesale Price Index,97.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-11-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2014-12-01,Iron Ore,India - Wholesale Price Index,95.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2014-12-01,Grain,India - Wholesale Price Index,123.1,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2014-12-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-01-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-01-01,Grain,India - Wholesale Price Index,124.9,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-01-01,Iron Ore,India - Wholesale Price Index,93.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-02-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-02-01,Grain,India - Wholesale Price Index,124.866667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-02-01,Iron Ore,India - Wholesale Price Index,83.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-03-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-03-01,Grain,India - Wholesale Price Index,125.666667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-03-01,Iron Ore,India - Wholesale Price Index,79.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-04-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-04-01,Grain,India - Wholesale Price Index,124.6,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-04-01,Iron Ore,India - Wholesale Price Index,68.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-05-01,Grain,India - Wholesale Price Index,123.133333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-05-01,Iron Ore,India - Wholesale Price Index,65.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-05-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-06-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-06-01,Grain,India - Wholesale Price Index,122.666667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-06-01,Iron Ore,India - Wholesale Price Index,63.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-07-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-07-01,Grain,India - Wholesale Price Index,123.9,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-07-01,Iron Ore,India - Wholesale Price Index,56.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-08-01,Grain,India - Wholesale Price Index,124.833333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-08-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-08-01,Iron Ore,India - Wholesale Price Index,54.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-09-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-09-01,Grain,India - Wholesale Price Index,125.666667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-09-01,Iron Ore,India - Wholesale Price Index,58.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-10-01,Grain,India - Wholesale Price Index,127.266667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-10-01,Iron Ore,India - Wholesale Price Index,50.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-10-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-11-01,Iron Ore,India - Wholesale Price Index,50.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2015-11-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-11-01,Grain,India - Wholesale Price Index,128.833333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-12-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2015-12-01,Grain,India - Wholesale Price Index,130.8,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2015-12-01,Iron Ore,India - Wholesale Price Index,47.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-01-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-01-01,Grain,India - Wholesale Price Index,132.666667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-01-01,Iron Ore,India - Wholesale Price Index,53.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-02-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-02-01,Grain,India - Wholesale Price Index,133.733333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-02-01,Iron Ore,India - Wholesale Price Index,46.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-03-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-03-01,Grain,India - Wholesale Price Index,134.133333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-03-01,Iron Ore,India - Wholesale Price Index,48.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-04-01,Iron Ore,India - Wholesale Price Index,47.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-04-01,Grain,India - Wholesale Price Index,134.133333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-04-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-05-01,Coal,India - Wholesale Price Index,105.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-05-01,Grain,India - Wholesale Price Index,135.5,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-05-01,Iron Ore,India - Wholesale Price Index,47.4,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-06-01,Coal,India - Wholesale Price Index,106.05,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-06-01,Grain,India - Wholesale Price Index,137.766667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-06-01,Iron Ore,India - Wholesale Price Index,43.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-07-01,Coal,India - Wholesale Price Index,106.05,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-07-01,Grain,India - Wholesale Price Index,141.266667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-07-01,Iron Ore,India - Wholesale Price Index,44.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-08-01,Coal,India - Wholesale Price Index,106.05,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-08-01,Grain,India - Wholesale Price Index,140.566667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-08-01,Iron Ore,India - Wholesale Price Index,44.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-09-01,Grain,India - Wholesale Price Index,141.533333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-09-01,Iron Ore,India - Wholesale Price Index,44.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-09-01,Coal,India - Wholesale Price Index,106.05,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-10-01,Coal,India - Wholesale Price Index,106.05,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-10-01,Grain,India - Wholesale Price Index,141.3,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-10-01,Iron Ore,India - Wholesale Price Index,52.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-11-01,Coal,India - Wholesale Price Index,106.05,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-11-01,Grain,India - Wholesale Price Index,144.0,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-11-01,Iron Ore,India - Wholesale Price Index,53.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2016-12-01,Coal,India - Wholesale Price Index,106.05,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2016-12-01,Grain,India - Wholesale Price Index,144.166667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2016-12-01,Iron Ore,India - Wholesale Price Index,54.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-01-01,Coal,India - Wholesale Price Index,116.9,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-01-01,Grain,India - Wholesale Price Index,144.033333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-01-01,Iron Ore,India - Wholesale Price Index,57.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-02-01,Iron Ore,India - Wholesale Price Index,60.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-02-01,Grain,India - Wholesale Price Index,144.266667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-02-01,Coal,India - Wholesale Price Index,120.75,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-03-01,Coal,India - Wholesale Price Index,121.1,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-03-01,Grain,India - Wholesale Price Index,141.766667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-03-01,Iron Ore,India - Wholesale Price Index,62.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-04-01,Coal,India - Wholesale Price Index,123.1,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-04-01,Grain,India - Wholesale Price Index,141.4,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-04-01,Iron Ore,India - Wholesale Price Index,68.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-05-01,Coal,India - Wholesale Price Index,123.1,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-05-01,Grain,India - Wholesale Price Index,140.0,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-05-01,Iron Ore,India - Wholesale Price Index,67.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-06-01,Coal,India - Wholesale Price Index,123.1,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-06-01,Grain,India - Wholesale Price Index,139.2,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-06-01,Iron Ore,India - Wholesale Price Index,66.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-07-01,Grain,India - Wholesale Price Index,138.566667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-07-01,Iron Ore,India - Wholesale Price Index,63.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-07-01,Coal,India - Wholesale Price Index,123.1,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-08-01,Iron Ore,India - Wholesale Price Index,63.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-08-01,Grain,India - Wholesale Price Index,139.066667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-08-01,Coal,India - Wholesale Price Index,123.1,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-09-01,Coal,India - Wholesale Price Index,123.1,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-09-01,Grain,India - Wholesale Price Index,138.366667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-09-01,Iron Ore,India - Wholesale Price Index,73.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-10-01,Coal,India - Wholesale Price Index,123.1,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-10-01,Grain,India - Wholesale Price Index,137.766667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-10-01,Iron Ore,India - Wholesale Price Index,73.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-11-01,Coal,India - Wholesale Price Index,122.0,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-11-01,Grain,India - Wholesale Price Index,136.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-11-01,Iron Ore,India - Wholesale Price Index,75.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2017-12-01,Coal,India - Wholesale Price Index,121.05,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2017-12-01,Grain,India - Wholesale Price Index,136.433333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2017-12-01,Iron Ore,India - Wholesale Price Index,77.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-01-01,Iron Ore,India - Wholesale Price Index,88.4,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-01-01,Grain,India - Wholesale Price Index,136.433333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-01-01,Coal,India - Wholesale Price Index,124.25,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-02-01,Coal,India - Wholesale Price Index,125.35,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-02-01,Grain,India - Wholesale Price Index,137.066667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-02-01,Iron Ore,India - Wholesale Price Index,87.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-03-01,Coal,India - Wholesale Price Index,125.35,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-03-01,Grain,India - Wholesale Price Index,136.666667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-03-01,Iron Ore,India - Wholesale Price Index,86.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-04-01,Coal,India - Wholesale Price Index,125.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-04-01,Grain,India - Wholesale Price Index,136.8,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-04-01,Iron Ore,India - Wholesale Price Index,90.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-05-01,Coal,India - Wholesale Price Index,125.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-05-01,Grain,India - Wholesale Price Index,136.733333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-05-01,Iron Ore,India - Wholesale Price Index,88.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-06-01,Grain,India - Wholesale Price Index,138.366667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-06-01,Iron Ore,India - Wholesale Price Index,88.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-06-01,Coal,India - Wholesale Price Index,125.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-07-01,Coal,India - Wholesale Price Index,125.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-07-01,Grain,India - Wholesale Price Index,138.366667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-07-01,Iron Ore,India - Wholesale Price Index,92.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-08-01,Coal,India - Wholesale Price Index,125.5,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-08-01,Grain,India - Wholesale Price Index,140.4,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-08-01,Iron Ore,India - Wholesale Price Index,87.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-09-01,Coal,India - Wholesale Price Index,125.9,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-09-01,Grain,India - Wholesale Price Index,141.8,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-09-01,Iron Ore,India - Wholesale Price Index,93.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-10-01,Coal,India - Wholesale Price Index,126.15,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-10-01,Grain,India - Wholesale Price Index,143.566667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-10-01,Iron Ore,India - Wholesale Price Index,96.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-11-01,Iron Ore,India - Wholesale Price Index,95.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2018-11-01,Grain,India - Wholesale Price Index,144.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-11-01,Coal,India - Wholesale Price Index,126.15,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-12-01,Coal,India - Wholesale Price Index,126.15,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2018-12-01,Grain,India - Wholesale Price Index,147.133333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2018-12-01,Iron Ore,India - Wholesale Price Index,91.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-01-01,Coal,India - Wholesale Price Index,126.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-01-01,Grain,India - Wholesale Price Index,151.133333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-01-01,Iron Ore,India - Wholesale Price Index,84.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-02-01,Coal,India - Wholesale Price Index,126.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-02-01,Grain,India - Wholesale Price Index,155.566667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-02-01,Iron Ore,India - Wholesale Price Index,80.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-03-01,Coal,India - Wholesale Price Index,126.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-03-01,Grain,India - Wholesale Price Index,156.766667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-03-01,Iron Ore,India - Wholesale Price Index,91.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-04-01,Grain,India - Wholesale Price Index,157.9,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-04-01,Iron Ore,India - Wholesale Price Index,91.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-04-01,Coal,India - Wholesale Price Index,126.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-05-01,Grain,India - Wholesale Price Index,157.933333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-05-01,Iron Ore,India - Wholesale Price Index,89.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-05-01,Coal,India - Wholesale Price Index,126.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-06-01,Iron Ore,India - Wholesale Price Index,93.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-06-01,Grain,India - Wholesale Price Index,159.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-06-01,Coal,India - Wholesale Price Index,126.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-07-01,Coal,India - Wholesale Price Index,126.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-07-01,Grain,India - Wholesale Price Index,162.933333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-07-01,Iron Ore,India - Wholesale Price Index,93.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-08-01,Coal,India - Wholesale Price Index,126.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-08-01,Grain,India - Wholesale Price Index,165.366667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-08-01,Iron Ore,India - Wholesale Price Index,92.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-09-01,Coal,India - Wholesale Price Index,127.75,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-09-01,Grain,India - Wholesale Price Index,166.866667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-09-01,Iron Ore,India - Wholesale Price Index,85.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-10-01,Coal,India - Wholesale Price Index,130.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-10-01,Grain,India - Wholesale Price Index,167.2,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-10-01,Iron Ore,India - Wholesale Price Index,87.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-11-01,Iron Ore,India - Wholesale Price Index,82.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2019-11-01,Grain,India - Wholesale Price Index,164.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-11-01,Coal,India - Wholesale Price Index,130.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-12-01,Coal,India - Wholesale Price Index,130.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2019-12-01,Grain,India - Wholesale Price Index,165.5,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2019-12-01,Iron Ore,India - Wholesale Price Index,89.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-01-01,Coal,India - Wholesale Price Index,130.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-01-01,Grain,India - Wholesale Price Index,167.4,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-01-01,Iron Ore,India - Wholesale Price Index,88.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-02-01,Coal,India - Wholesale Price Index,130.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-02-01,Grain,India - Wholesale Price Index,162.933333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-02-01,Iron Ore,India - Wholesale Price Index,92.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-03-01,Coal,India - Wholesale Price Index,130.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-03-01,Grain,India - Wholesale Price Index,158.966667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-03-01,Iron Ore,India - Wholesale Price Index,93.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-04-01,Grain,India - Wholesale Price Index,157.633333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-04-01,Iron Ore,India - Wholesale Price Index,89.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-04-01,Coal,India - Wholesale Price Index,130.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-05-01,Coal,India - Wholesale Price Index,130.3,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-05-01,Grain,India - Wholesale Price Index,157.033333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-05-01,Iron Ore,India - Wholesale Price Index,86.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-06-01,Coal,India - Wholesale Price Index,130.3,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-06-01,Grain,India - Wholesale Price Index,154.766667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-06-01,Iron Ore,India - Wholesale Price Index,79.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-07-01,Coal,India - Wholesale Price Index,130.3,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-07-01,Grain,India - Wholesale Price Index,153.5,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-07-01,Iron Ore,India - Wholesale Price Index,80.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-08-01,Coal,India - Wholesale Price Index,130.3,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-08-01,Grain,India - Wholesale Price Index,152.666667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-08-01,Iron Ore,India - Wholesale Price Index,85.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-09-01,Iron Ore,India - Wholesale Price Index,94.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-09-01,Grain,India - Wholesale Price Index,149.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-09-01,Coal,India - Wholesale Price Index,130.3,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-10-01,Coal,India - Wholesale Price Index,130.35,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-10-01,Grain,India - Wholesale Price Index,146.433333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-10-01,Iron Ore,India - Wholesale Price Index,95.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-11-01,Coal,India - Wholesale Price Index,130.45,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-11-01,Grain,India - Wholesale Price Index,146.866667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-11-01,Iron Ore,India - Wholesale Price Index,105.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2020-12-01,Coal,India - Wholesale Price Index,130.85,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2020-12-01,Grain,India - Wholesale Price Index,146.4,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2020-12-01,Iron Ore,India - Wholesale Price Index,114.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-01-01,Coal,India - Wholesale Price Index,130.85,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-01-01,Grain,India - Wholesale Price Index,145.933333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-01-01,Iron Ore,India - Wholesale Price Index,122.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-02-01,Grain,India - Wholesale Price Index,145.533333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-02-01,Iron Ore,India - Wholesale Price Index,128.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-02-01,Coal,India - Wholesale Price Index,130.85,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-03-01,Grain,India - Wholesale Price Index,145.9,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-03-01,Iron Ore,India - Wholesale Price Index,141.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-03-01,Coal,India - Wholesale Price Index,130.85,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-04-01,Coal,India - Wholesale Price Index,130.85,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-04-01,Grain,India - Wholesale Price Index,149.333333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-04-01,Iron Ore,India - Wholesale Price Index,149.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-05-01,Coal,India - Wholesale Price Index,130.85,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-05-01,Grain,India - Wholesale Price Index,150.333333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-05-01,Iron Ore,India - Wholesale Price Index,165.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-06-01,Coal,India - Wholesale Price Index,130.85,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-06-01,Grain,India - Wholesale Price Index,150.733333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-06-01,Iron Ore,India - Wholesale Price Index,182.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-07-01,Coal,India - Wholesale Price Index,131.15,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-07-01,Grain,India - Wholesale Price Index,150.6,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-07-01,Iron Ore,India - Wholesale Price Index,184.4,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-08-01,Grain,India - Wholesale Price Index,153.0,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-08-01,Iron Ore,India - Wholesale Price Index,182.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-08-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-09-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-09-01,Grain,India - Wholesale Price Index,154.566667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-09-01,Iron Ore,India - Wholesale Price Index,165.6,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-10-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-10-01,Grain,India - Wholesale Price Index,154.366667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-10-01,Iron Ore,India - Wholesale Price Index,153.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-11-01,Grain,India - Wholesale Price Index,155.433333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-11-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-11-01,Iron Ore,India - Wholesale Price Index,150.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2021-12-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2021-12-01,Grain,India - Wholesale Price Index,157.0,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2021-12-01,Iron Ore,India - Wholesale Price Index,139.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-01-01,Grain,India - Wholesale Price Index,158.266667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-01-01,Iron Ore,India - Wholesale Price Index,130.7,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-01-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-02-01,Iron Ore,India - Wholesale Price Index,132.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-02-01,Grain,India - Wholesale Price Index,160.366667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-02-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-03-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-03-01,Grain,India - Wholesale Price Index,165.266667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-03-01,Iron Ore,India - Wholesale Price Index,139.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-04-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-04-01,Grain,India - Wholesale Price Index,169.8,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-04-01,Iron Ore,India - Wholesale Price Index,140.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-05-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-05-01,Grain,India - Wholesale Price Index,170.8,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-05-01,Iron Ore,India - Wholesale Price Index,147.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-06-01,Iron Ore,India - Wholesale Price Index,130.2,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-06-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-06-01,Grain,India - Wholesale Price Index,169.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-07-01,Iron Ore,India - Wholesale Price Index,112.4,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-07-01,Grain,India - Wholesale Price Index,173.533333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-07-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-08-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-08-01,Grain,India - Wholesale Price Index,179.566667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-08-01,Iron Ore,India - Wholesale Price Index,107.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-09-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-09-01,Grain,India - Wholesale Price Index,181.0,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-09-01,Iron Ore,India - Wholesale Price Index,106.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-10-01,Iron Ore,India - Wholesale Price Index,101.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-10-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-10-01,Grain,India - Wholesale Price Index,180.433333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-11-01,Grain,India - Wholesale Price Index,181.566667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-11-01,Iron Ore,India - Wholesale Price Index,97.4,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-11-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2022-12-01,Grain,India - Wholesale Price Index,185.266667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2022-12-01,Iron Ore,India - Wholesale Price Index,97.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2022-12-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-01-01,Grain,India - Wholesale Price Index,188.833333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-01-01,Iron Ore,India - Wholesale Price Index,107.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-01-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-02-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-02-01,Grain,India - Wholesale Price Index,186.7,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-02-01,Iron Ore,India - Wholesale Price Index,115.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-03-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-03-01,Grain,India - Wholesale Price Index,184.966667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-03-01,Iron Ore,India - Wholesale Price Index,120.1,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-04-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-04-01,Grain,India - Wholesale Price Index,182.933333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-04-01,Iron Ore,India - Wholesale Price Index,123.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-05-01,Coal,India - Wholesale Price Index,131.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-05-01,Grain,India - Wholesale Price Index,180.633333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-05-01,Iron Ore,India - Wholesale Price Index,121.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-06-01,Grain,India - Wholesale Price Index,181.166667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-06-01,Iron Ore,India - Wholesale Price Index,116.3,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-06-01,Coal,India - Wholesale Price Index,134.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-07-01,Coal,India - Wholesale Price Index,134.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-07-01,Grain,India - Wholesale Price Index,183.6,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-07-01,Iron Ore,India - Wholesale Price Index,112.5,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-08-01,Coal,India - Wholesale Price Index,134.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-08-01,Grain,India - Wholesale Price Index,185.433333,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-08-01,Iron Ore,India - Wholesale Price Index,108.8,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-09-01,Grain,India - Wholesale Price Index,185.466667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-09-01,Coal,India - Wholesale Price Index,134.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-09-01,Iron Ore,India - Wholesale Price Index,106.9,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-10-01,Coal,India - Wholesale Price Index,134.6,INDEX,"Office of Economic Adviser, India - WPI (Coking + Non-Coking Coal composite)",COAL,OBSERVED_ORIGINAL
+2023-10-01,Grain,India - Wholesale Price Index,186.966667,INDEX,"Office of Economic Adviser, India - WPI (Wheat + Maize + Rice composite)",GRAIN,OBSERVED_ORIGINAL
+2023-10-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,"Office of Economic Adviser, India - WPI (direct series)",IRON_ORE,OBSERVED_ORIGINAL
+2023-11-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2023-11-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2023-11-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2023-12-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2023-12-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2023-12-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-01-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-01-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-01-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-02-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-02-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-02-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-03-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-03-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-03-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-04-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-04-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-04-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-05-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-05-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-05-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-06-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-06-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-06-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-07-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-07-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-07-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-08-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-08-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-08-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-09-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-09-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-09-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-10-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-10-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-10-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-11-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2024-11-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-11-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-12-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2024-12-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2024-12-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-01-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-01-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-01-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-02-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-02-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-02-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-03-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-03-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-03-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-04-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-04-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-04-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-05-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-05-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-05-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-06-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-06-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-06-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-07-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-07-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-07-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-08-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-08-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-08-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-09-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-09-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-09-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-10-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-10-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-10-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-11-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-11-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-11-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2025-12-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2025-12-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2025-12-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2026-01-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2026-01-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2026-01-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2026-02-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2026-02-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2026-02-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2026-03-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2026-03-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2026-03-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2026-04-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2026-04-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2026-04-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2026-05-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2026-05-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2026-05-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2026-06-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2026-06-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2026-06-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2026-07-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2026-07-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2026-07-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION
+2026-08-01,Grain,India - Wholesale Price Index,186.966667,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,GRAIN,DERIVED_EXTENSION
+2026-08-01,Coal,India - Wholesale Price Index,134.6,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,COAL,DERIVED_EXTENSION
+2026-08-01,Iron Ore,India - Wholesale Price Index,112.0,INDEX,Derived extension: carry-forward from latest uploaded Office of Economic Adviser WPI observation,IRON_ORE,DERIVED_EXTENSION

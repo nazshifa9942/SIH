@@ -1,0 +1,438 @@
+date,indicator_name,value,unit,source,source_type
+2010-04-01,Coal Import Value from Australia,4050.17,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2010-04-01,Coal Import Value from Indonesia,2958.52,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2010-04-01,Coal Import Value from Mozambique,0.02,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2010-04-01,Iron Ore Import Value from Australia,0.0,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2010-04-01,Iron Ore Import Value from Indonesia,4.21,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2011-04-01,Coal Import Value from Australia,7765.57,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2011-04-01,Coal Import Value from Indonesia,5500.61,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2011-04-01,Coal Import Value from Mozambique,9.88,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2011-04-01,Iron Ore Import Value from Indonesia,0.0,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2012-04-01,Coal Import Value from Australia,5809.93,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2012-04-01,Coal Import Value from Indonesia,6061.43,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2012-04-01,Coal Import Value from Mozambique,187.17,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2012-04-01,Iron Ore Import Value from Australia,61.6,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2013-04-01,Coal Import Value from Australia,5288.39,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2013-04-01,Coal Import Value from Indonesia,6852.39,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2013-04-01,Coal Import Value from Mozambique,193.35,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2013-04-01,Iron Ore Import Value from Australia,6.82,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2014-04-01,Coal Import Value from Australia,5665.97,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2014-04-01,Coal Import Value from Indonesia,7384.21,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2014-04-01,Coal Import Value from Mozambique,218.46,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2014-04-01,Iron Ore Import Value from Australia,161.01,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2015-04-01,Coal Import Value from Australia,4543.91,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2015-04-01,Coal Import Value from Indonesia,4893.12,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2015-04-01,Coal Import Value from Mozambique,217.52,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2015-04-01,Iron Ore Import Value from Australia,3.88,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2016-04-01,Coal Import Value from Australia,6472.52,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2016-04-01,Coal Import Value from Indonesia,4751.45,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2016-04-01,Coal Import Value from Mozambique,309.25,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2016-04-01,Iron Ore Import Value from Australia,0.5,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2017-04-01,Coal Import Value from Australia,8498.08,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2017-04-01,Coal Import Value from Indonesia,6218.68,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2017-04-01,Coal Import Value from Mozambique,754.79,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2017-04-01,Iron Ore Import Value from Australia,113.02,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2018-04-01,Coal Import Value from Australia,8976.28,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2018-04-01,Coal Import Value from Indonesia,7200.22,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2018-04-01,Coal Import Value from Mozambique,857.61,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2018-04-01,Iron Ore Import Value from Australia,309.68,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2019-04-01,Coal Import Value from Australia,7246.34,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2019-04-01,Coal Import Value from Indonesia,6551.64,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2019-04-01,Coal Import Value from Mozambique,570.35,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2019-04-01,Iron Ore Import Value from Australia,12.6,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2020-04-01,Coal Import Value from Australia,5779.02,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2020-04-01,Coal Import Value from Indonesia,4645.22,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2020-04-01,Coal Import Value from Mozambique,316.34,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2020-04-01,Iron Ore Import Value from Australia,8.06,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2020-04-01,Iron Ore Import Value from Mozambique,0.09,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2021-01-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-01-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-01-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-01-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-01-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-01-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-02-01,COKING_COAL_SHIPPING_DEMAND_PROXY,140.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-02-01,GRAIN_SHIPPING_DEMAND_PROXY,112.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-02-01,IRON_ORE_SHIPPING_DEMAND_PROXY,112.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-02-01,PALM_OIL_SHIPPING_DEMAND_PROXY,224.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-02-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,168.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-02-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,84.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-03-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-03-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-03-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-03-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-03-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-03-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-04-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-04-01,Coal Import Value from Australia,13044.96,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2021-04-01,Coal Import Value from Indonesia,6579.56,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2021-04-01,Coal Import Value from Mozambique,1011.05,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2021-04-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-04-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-04-01,Iron Ore Import Value from Australia,106.74,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2021-04-01,Iron Ore Import Value from Mozambique,0.0,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2021-04-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-04-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-04-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-05-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-05-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-05-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-05-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-05-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-05-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-06-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-06-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-06-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-06-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-06-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-06-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-07-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-07-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-07-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-07-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-07-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-07-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-08-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-08-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-08-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-08-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-08-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-08-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-09-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-09-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-09-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-09-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-09-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-09-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-10-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-10-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-10-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-10-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-10-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-10-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-11-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-11-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-11-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-11-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-11-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-11-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-12-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-12-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-12-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-12-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-12-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2021-12-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-01-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-01-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-01-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-01-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-01-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-01-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-02-01,COKING_COAL_SHIPPING_DEMAND_PROXY,140.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-02-01,GRAIN_SHIPPING_DEMAND_PROXY,112.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-02-01,IRON_ORE_SHIPPING_DEMAND_PROXY,112.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-02-01,PALM_OIL_SHIPPING_DEMAND_PROXY,224.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-02-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,168.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-02-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,84.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-03-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-03-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-03-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-03-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-03-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-03-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-04-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-04-01,Coal Import Value from Australia,14712.31,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2022-04-01,Coal Import Value from Indonesia,14584.15,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2022-04-01,Coal Import Value from Mozambique,1797.2,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2022-04-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-04-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-04-01,Iron Ore Import Value from Australia,15.53,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2022-04-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-04-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-04-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-05-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-05-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-05-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-05-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-05-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-05-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-06-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-06-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-06-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-06-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-06-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-06-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-07-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-07-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-07-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-07-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-07-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-07-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-08-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-08-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-08-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-08-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-08-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-08-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-09-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-09-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-09-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-09-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-09-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-09-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-10-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-10-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-10-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-10-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-10-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-10-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-11-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-11-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-11-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-11-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-11-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-11-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-12-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-12-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-12-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-12-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-12-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2022-12-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-01-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-01-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-01-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-01-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-01-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-01-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-02-01,COKING_COAL_SHIPPING_DEMAND_PROXY,140.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-02-01,GRAIN_SHIPPING_DEMAND_PROXY,112.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-02-01,IRON_ORE_SHIPPING_DEMAND_PROXY,112.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-02-01,PALM_OIL_SHIPPING_DEMAND_PROXY,224.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-02-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,168.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-02-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,84.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-03-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-03-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-03-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-03-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-03-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-03-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-04-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-04-01,Coal Import Value from Australia,10829.6,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2023-04-01,Coal Import Value from Indonesia,9942.26,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2023-04-01,Coal Import Value from Mozambique,1370.33,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2023-04-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-04-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-04-01,Iron Ore Import Value from Australia,331.48,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2023-04-01,Iron Ore Import Value from Mozambique,0.0,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2023-04-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-04-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-04-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-05-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-05-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-05-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-05-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-05-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-05-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-06-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-06-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-06-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-06-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-06-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-06-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-07-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-07-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-07-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-07-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-07-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-07-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-08-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-08-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-08-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-08-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-08-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-08-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-09-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-09-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-09-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-09-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-09-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-09-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-10-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-10-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-10-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-10-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-10-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-10-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-11-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-11-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-11-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-11-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-11-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-11-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-12-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-12-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-12-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-12-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-12-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2023-12-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-01-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-01-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-01-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-01-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-01-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-01-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-02-01,COKING_COAL_SHIPPING_DEMAND_PROXY,145.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-02-01,GRAIN_SHIPPING_DEMAND_PROXY,116.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-02-01,IRON_ORE_SHIPPING_DEMAND_PROXY,116.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-02-01,PALM_OIL_SHIPPING_DEMAND_PROXY,232.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-02-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,174.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-02-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,87.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-03-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-03-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-03-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-03-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-03-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-03-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-04-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-04-01,Coal Import Value from Australia,6909.68,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2024-04-01,Coal Import Value from Indonesia,8484.83,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2024-04-01,Coal Import Value from Mozambique,1129.11,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2024-04-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-04-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-04-01,Iron Ore Import Value from Australia,263.27,USD Million,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2024-04-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-04-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-04-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-05-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-05-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-05-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-05-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-05-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-05-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-06-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-06-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-06-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-06-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-06-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-06-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-07-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-07-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-07-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-07-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-07-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-07-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-08-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-08-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-08-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-08-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-08-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-08-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-09-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-09-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-09-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-09-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-09-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-09-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-10-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-10-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-10-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-10-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-10-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-10-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-11-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-11-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-11-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-11-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-11-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-11-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-12-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-12-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-12-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-12-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-12-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2024-12-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-01-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-01-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-01-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-01-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-01-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-01-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-02-01,COKING_COAL_SHIPPING_DEMAND_PROXY,140.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-02-01,GRAIN_SHIPPING_DEMAND_PROXY,112.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-02-01,IRON_ORE_SHIPPING_DEMAND_PROXY,112.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-02-01,PALM_OIL_SHIPPING_DEMAND_PROXY,224.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-02-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,168.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-02-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,84.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-03-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-03-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-03-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-03-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-03-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-03-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-03-31,Food Grain Import Volume at Chennai Port,222.0,Thousand Tonnes,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2025-03-31,Food Grain Import Volume at Haldia Dock Complex,35.0,Thousand Tonnes,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2025-03-31,Food Grain Import Volume at Kamarajar Port,0.0,Thousand Tonnes,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2025-03-31,Food Grain Import Volume at Kolkata Dock System,164.0,Thousand Tonnes,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2025-03-31,Food Grain Import Volume at Paradip Port,0.0,Thousand Tonnes,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2025-03-31,Food Grain Import Volume at V.O. Chidambaranar Port,414.0,Thousand Tonnes,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2025-03-31,Food Grain Import Volume at Visakhapatnam Port,82.0,Thousand Tonnes,PRESERVED: original supplied trade-demand dataset,OBSERVED_ORIGINAL
+2025-04-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-04-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-04-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-04-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-04-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-04-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-05-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-05-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-05-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-05-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-05-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-05-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-06-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-06-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-06-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-06-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-06-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-06-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-07-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-07-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-07-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-07-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-07-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-07-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-08-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-08-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-08-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-08-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-08-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-08-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-09-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-09-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-09-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-09-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-09-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-09-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-10-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-10-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-10-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-10-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-10-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-10-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-11-01,COKING_COAL_SHIPPING_DEMAND_PROXY,150.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-11-01,GRAIN_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-11-01,IRON_ORE_SHIPPING_DEMAND_PROXY,120.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-11-01,PALM_OIL_SHIPPING_DEMAND_PROXY,240.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-11-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,180.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-11-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,90.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-12-01,COKING_COAL_SHIPPING_DEMAND_PROXY,155.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-12-01,GRAIN_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-12-01,IRON_ORE_SHIPPING_DEMAND_PROXY,124.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-12-01,PALM_OIL_SHIPPING_DEMAND_PROXY,248.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-12-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,186.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2025-12-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,93.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2026-01-01,COKING_COAL_SHIPPING_DEMAND_PROXY,5.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2026-01-01,GRAIN_SHIPPING_DEMAND_PROXY,4.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2026-01-01,IRON_ORE_SHIPPING_DEMAND_PROXY,4.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2026-01-01,PALM_OIL_SHIPPING_DEMAND_PROXY,8.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2026-01-01,POL/CRUDE_SHIPPING_DEMAND_PROXY,6.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY
+2026-01-01,THERMAL_COAL_SHIPPING_DEMAND_PROXY,3.0,ROUTE OBSERVATIONS,DERIVED: monthly historical freight route activity; demand proxy,DERIVED_PROXY

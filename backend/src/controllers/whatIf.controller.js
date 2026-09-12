@@ -1,4 +1,4 @@
-const whatIfService = require('../services/whatIf/whatIf.service');
+const whatIfService = require('../services/WhatIf/whatIf.service');
 
 async function createWhatIfScenario(req, res, next) {
   try {

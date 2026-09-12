@@ -7,6 +7,12 @@ logs/
 .DS_Store
 Thumbs.db
 .idea/
-docs
 .env.example
 structure.txt
+# Python virtual environments
+.venv/
+.venv-*/
+**/.venv/
+**/.venv-*/
+__pycache__/
+*.pyc

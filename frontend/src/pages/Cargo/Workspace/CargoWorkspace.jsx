@@ -164,10 +164,10 @@ export function CargoWorkspace() {
 
   const detailsSubtitle = cargo
     ? `${cargo.cargoType || 'DRY BULK'} · ${Number(cargo.quantityMt || 0).toLocaleString()} MT · REQUIRED: ${formatDateSafely(
-        cargo.requiredDate || cargo.requiredDeliveryDate,
-        'N/A',
-        { day: 'numeric', month: 'short', year: 'numeric' }
-      )}`
+      cargo.requiredDate || cargo.requiredDeliveryDate,
+      'N/A',
+      { day: 'numeric', month: 'short', year: 'numeric' }
+    )}`
     : 'IRON ORE · 55,000 MT · REQUIRED: 20 SEP 2026';
 
   const renderCurrentStep = () => {
@@ -277,12 +277,21 @@ export function CargoWorkspace() {
       </div>
 
       {/* STEP TRACKER */}
+
       <div className="flex flex-wrap gap-0 border-b border-[var(--color-brand-border-strong)]">
         {STEPS.map((step, index) => {
           const isActive = currentStep === index;
           const isCompleted = completedSteps[index];
-          const maxCompleted = Math.max(-1, ...Object.keys(completedSteps).map(Number));
-          const isClickable = isCompleted || index <= maxCompleted + 1 || index === 0;
+
+          const maxCompleted = Math.max(
+            -1,
+            ...Object.keys(completedSteps).map(Number)
+          );
+
+          const isClickable =
+            isCompleted ||
+            index <= maxCompleted + 1 ||
+            index === 0;
 
           return (
             <button
@@ -290,24 +299,36 @@ export function CargoWorkspace() {
               onClick={() => isClickable && setCurrentStep(index)}
               disabled={!isClickable && !isActive}
               className={`
-                flex items-center gap-2 px-4 py-3 text-xs transition-all border-b-2
-                ${
-                  isActive
-                    ? 'bg-white border-[#f47920] text-[var(--color-gov-navy)] font-bold'
-                    : 'bg-transparent border-transparent text-slate-600'
+          flex items-center gap-2
+          px-4 py-3
+          text-xs
+          transition-all
+          border-b-2
+          ${isActive
+                  ? "bg-white border-[#f47920] text-[var(--color-gov-navy)] font-bold"
+                  : "bg-transparent border-transparent text-slate-600"
                 }
-                ${!isClickable && !isActive ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer hover:bg-white'}
-                ${isCompleted && !isActive ? 'text-[var(--color-status-success)]' : ''}
-              `}
+          ${!isClickable && !isActive
+                  ? "opacity-40 cursor-not-allowed"
+                  : "cursor-pointer hover:bg-white"
+                }
+          ${isCompleted && !isActive
+                  ? "text-[var(--color-status-success)]"
+                  : ""
+                }
+        `}
             >
               {isCompleted && !isActive ? (
                 <Check className="w-4 h-4 text-[var(--color-status-success)]" />
               ) : null}
+
               {step.label}
             </button>
           );
         })}
       </div>
+
+
 
       {/* CONTENT AREA */}
       <Card>

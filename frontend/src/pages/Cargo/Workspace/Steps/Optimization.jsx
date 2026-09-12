@@ -374,7 +374,7 @@ export const Optimization = ({
                     {plan.feasible ? 'FEASIBLE' : 'INFEASIBLE'}
                   </span>
                   <span className="text-sm font-bold text-[var(--color-brand-text-primary)]">
-                    {plan.numberOfTrips || 1} VOYAGE {plan.numberOfTrips === 1 ? 'TRIP' : 'TRIPS'}
+                    {plan.recommendedPlan?.length || plan.numberOfTrips || 1} VOYAGE {((plan.recommendedPlan?.length || plan.numberOfTrips || 1) === 1) ? 'TRIP' : 'TRIPS'}
                   </span>
                 </div>
                 <div className="text-[11px] text-[var(--color-brand-text-secondary)] mt-1">
@@ -389,7 +389,7 @@ export const Optimization = ({
                 <div className="text-2xl font-bold text-[var(--color-status-success)] mt-1">
                   ${Number(plan.totalEstimatedCost || (quantityMt * 18.5)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </div>
-                <div className="text-[11px] text-[var(--color-brand-text-secondary)] mt-0.5">Includes freight outlay & port turnaround</div>
+                <div className="text-[11px] text-[var(--color-brand-text-secondary)] mt-0.5">Charter cost score based on selected vessel & voyage trips</div>
               </div>
             </div>
           </div>

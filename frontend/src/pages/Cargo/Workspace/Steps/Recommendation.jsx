@@ -249,7 +249,11 @@ export const Recommendation = ({
         <div className="p-4 border-t border-[var(--color-brand-border-strong)] bg-[var(--color-brand-inset)] space-y-1">
           <div className="text-[11px] uppercase tracking-widest text-[var(--color-brand-text-primary)]">Confidence Score</div>
           <div className="text-xl font-bold text-[var(--color-brand-text-primary)]">
-            {recommendation.confidence != null ? `${(Number(recommendation.confidence) * 100).toFixed(1)}%` : 'N/A'}
+            {recommendation.confidence !== null &&
+              recommendation.confidence !== undefined &&
+              Number.isFinite(Number(recommendation.confidence))
+              ? `${(Number(recommendation.confidence) * 100).toFixed(1)}%`
+              : 'MODEL CONFIDENCE NOT PROVIDED'}
           </div>
         </div>
 

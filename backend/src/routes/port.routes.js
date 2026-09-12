@@ -11,7 +11,7 @@ const router = express.Router();
 router.post(
     '/',
     requireAuth,
-    requireRole(ROLES.ADMIN),
+    requireRole(ROLES.ADMIN, ROLES.LOGISTICS_MANAGER),
     validate(createPortSchema),
     portController.createPort
 );
@@ -32,7 +32,7 @@ router.get(
 router.put(
     '/:id',
     requireAuth,
-    requireRole(ROLES.ADMIN),
+    requireRole(ROLES.ADMIN,ROLES.LOGISTICS_MANAGER),
     validate(uuidParamSchema, 'params'),
     validate(updatePortSchema),
     portController.updatePort

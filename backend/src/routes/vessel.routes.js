@@ -31,7 +31,7 @@ router.post(
 router.post(
   '/',
   requireAuth,
-  requireRole(ROLES.ADMIN),
+  requireRole(ROLES.ADMIN, ROLES.PROCUREMENT_MANAGER),
   validate(createVesselSchema),
   vesselController.createVessel
 );
@@ -59,7 +59,7 @@ router.get(
 router.put(
   '/:id',
   requireAuth,
-  requireRole(ROLES.ADMIN),
+  requireRole(ROLES.ADMIN, ROLES.PROCUREMENT_MANAGER),
   validate(uuidParamSchema, 'params'),
   validate(updateVesselSchema),
   vesselController.updateVessel

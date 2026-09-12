@@ -15,10 +15,10 @@ export const Login = () => {
   const location = useLocation();
 
   if (user) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/overview" replace />;
   }
 
-  const from = location.state?.from?.pathname || '/dashboard';
+  const from = location.state?.from?.pathname || '/overview';
 
   const handleSubmit = async (e) => {
     e.preventDefault();

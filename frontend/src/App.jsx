@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { AppLayout } from './components/layout/AppLayout';
+import { InstitutionalHome } from './pages/Home/InstitutionalHome';
 import { Login } from './pages/Login';
 import { CommandDashboard } from './pages/Overview/CommandDashboard';
 import { CargoList } from './pages/Cargo/CargoList';
@@ -13,18 +14,16 @@ import { MarketDashboard } from './pages/Market/MarketDashboard';
 import { AlertsFeed } from './pages/Alerts/AlertsFeed';
 import { AdminDashboard } from './pages/Admin/AdminDashboard';
 import { WhatIfSimulator } from './pages/WhatIf/WhatIfSimulator';
-import { Home } from './pages/Home/Home';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<InstitutionalHome />} />
           <Route path="/login" element={<Login />} />
           <Route element={<AppLayout />}>
-            <Route path="/dashboard" element={<CommandDashboard />} />
+            <Route path="/overview" element={<CommandDashboard />} />
             <Route path="/cargo" element={<CargoList />} />
             <Route path="/cargo/:cargoRequestId/*" element={<CargoWorkspace />} />
             <Route path="/vessels" element={<VesselList />} />

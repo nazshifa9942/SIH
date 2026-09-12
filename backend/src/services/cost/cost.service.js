@@ -6,78 +6,195 @@ const { ROLES } = require('../../utils/roles');
 /**
  * Phase 2.6 — Cost Calculation.
  *
- * Formula classification (see approved implementation plan):
- * - Component list (freight, fuel, port, handling, delay/demurrage,
- *   repositioning, other): DOCUMENTED (BUSINESS_RULES.md, PROJECT_SPEC.md Feature 6).
- * - totalCost = sum of components: DOCUMENTED (implied additive composition).
- * - freightCost = unitRate x quantityMt: INFERRED (consistent with Phase 2.3
- *   placeholder behavior and freight_rates.rate_unit = 'MT').
- * - Unit-rate precedence: latest ForecastRecord average first, fallback to
- *   latest observed route FreightRate: INFERRED.
- * - fuel / port / handling / delay / repositioning / other: UNSPECIFIED.
- *   No formula or coefficient exists in any source-of-truth document.
- *   They are persisted as zero placeholders and never invented here.
+ * Cost components:
+ * - Freight
+ * - Fuel
+ * - Port
+ * - Handling
+ * - Delay / Demurrage
+ * - Repositioning
+ * - Other
+ *
+ * Documented calculation:
+ *   freightCost = unitRate × quantityMt
+ *   totalCost   = sum of all components
+ *
+ * Freight unit-rate precedence:
+ *   1. Latest ForecastRecord
+ *   2. Latest observed FreightRate on the cargo route
+ *
+ * The current real XGBoost model stores its forecast as:
+ *
+ * {
+ *   predictedFreightRate: 11.0463,
+ *   forecastDate: "2026-09-20"
+ * }
+ *
+ * Legacy forecast records may also be stored as:
+ *
+ * [
+ *   { predictedRate: 25.50 },
+ *   { predictedRate: 26.10 }
+ * ]
+ *
+ * Fuel, port, handling, delay, repositioning and other charges
+ * remain zero because approved calculation formulas are not configured.
  */
 
 const ZERO_PLACEHOLDER_LABEL = 'ZERO_PLACEHOLDER_UNDOCUMENTED';
 
+/**
+ * Check whether the logged-in user can access the cargo.
+ */
 function checkCostAccess(cargo, user) {
     const isOwner = cargo.userId === user.id;
-    const isPrivileged = user.role === ROLES.ADMIN || user.role === ROLES.LOGISTICS_MANAGER;
+
+    const isPrivileged =
+        user.role === ROLES.ADMIN ||
+        user.role === ROLES.LOGISTICS_MANAGER;
+
     return isOwner || isPrivileged;
 }
 
+/**
+ * Round monetary values to 2 decimal places.
+ */
 function roundToMoney(value) {
-    // Single rounding step at persist time; money columns are Decimal(14,2).
     return Math.round((value + Number.EPSILON) * 100) / 100;
 }
 
 /**
- * Resolves the unit freight rate for a cargo request.
+ * Resolve the freight unit rate for a cargo request.
  *
- * Precedence (INFERRED, mirrors Phase 2.3):
- *   1. Latest ForecastRecord -> average of forecastJson[].predictedRate ("FORECAST").
- *   2. Fallback: latest observed FreightRate on the cargo route ("MARKET_OBSERVATION").
+ * Priority:
  *
- * Throws INSUFFICIENT_DATA when neither source can produce a usable rate.
+ * 1. Latest ForecastRecord
+ *    - Real XGBoost object format:
+ *      { predictedFreightRate: number }
+ *
+ *    - Legacy array format:
+ *      [{ predictedRate: number }, ...]
+ *
+ * 2. Latest observed FreightRate for the route.
  */
 async function resolveUnitFreightRate(cargo) {
     const latestForecast = await prisma.forecastRecord.findFirst({
-        where: { cargoRequestId: cargo.id },
-        orderBy: { createdAt: 'desc' },
+        where: {
+            cargoRequestId: cargo.id,
+        },
+        orderBy: {
+            createdAt: 'desc',
+        },
     });
 
+    /**
+     * ------------------------------------------------------------
+     * FORECAST SOURCE
+     * ------------------------------------------------------------
+     */
     if (latestForecast) {
-        const predictions = latestForecast.forecastJson;
-        if (!predictions || !Array.isArray(predictions) || predictions.length === 0) {
-            // Mirror Phase 2.3 behavior: a present-but-empty forecast is a data
-            // error, not a reason to silently fall back to another source.
-            throw new AppError(
-                400,
-                'INSUFFICIENT_DATA',
-                'Forecast record has empty forecast data'
-            );
+        const forecastJson = latestForecast.forecastJson;
+
+        /**
+         * REAL XGBoost FORMAT
+         *
+         * Example:
+         * {
+         *   predictedFreightRate: 11.046307563781738,
+         *   forecastDate: "2026-09-20"
+         * }
+         */
+        if (
+            forecastJson &&
+            !Array.isArray(forecastJson) &&
+            Number.isFinite(
+                Number(forecastJson.predictedFreightRate)
+            )
+        ) {
+            const unitRate =
+                Number(forecastJson.predictedFreightRate);
+
+            return {
+                unitRate,
+                source: 'FORECAST',
+            };
         }
 
-        const sum = predictions.reduce(
-            (acc, p) => acc + (parseFloat(p.predictedRate) || 0),
-            0
-        );
-        const averageForecasted = sum / predictions.length;
+        /**
+         * --------------------------------------------------------
+         * LEGACY / ARRAY FORMAT
+         * --------------------------------------------------------
+         *
+         * Supports both:
+         *
+         * { predictedRate: 25.50 }
+         *
+         * and
+         *
+         * { predictedFreightRate: 25.50 }
+         */
+        if (
+            Array.isArray(forecastJson) &&
+            forecastJson.length > 0
+        ) {
+            const validPredictions = forecastJson
+                .map((prediction) => {
+                    if (!prediction) {
+                        return NaN;
+                    }
 
-        return {
-            unitRate: averageForecasted,
-            source: 'FORECAST',
-        };
+                    const rate =
+                        prediction.predictedRate ??
+                        prediction.predictedFreightRate;
+
+                    return Number(rate);
+                })
+                .filter((rate) => Number.isFinite(rate));
+
+            if (validPredictions.length > 0) {
+                const averageForecasted =
+                    validPredictions.reduce(
+                        (sum, rate) => sum + rate,
+                        0
+                    ) / validPredictions.length;
+
+                return {
+                    unitRate: averageForecasted,
+                    source: 'FORECAST',
+                };
+            }
+        }
+
+        /**
+         * A forecast record exists, but its JSON does not contain
+         * a usable freight rate.
+         *
+         * Do not silently use a fake value.
+         */
+        throw new AppError(
+            400,
+            'INSUFFICIENT_DATA',
+            'Forecast record has empty or invalid forecast data'
+        );
     }
 
-    const latestFreightRate = await prisma.freightRate.findFirst({
-        where: {
-            originPortId: cargo.originPortId,
-            destinationPortId: cargo.destinationPortId,
-        },
-        orderBy: { observedAt: 'desc' },
-    });
+    /**
+     * ------------------------------------------------------------
+     * MARKET FALLBACK
+     * ------------------------------------------------------------
+     *
+     * Only used when no ForecastRecord exists.
+     */
+    const latestFreightRate =
+        await prisma.freightRate.findFirst({
+            where: {
+                originPortId: cargo.originPortId,
+                destinationPortId: cargo.destinationPortId,
+            },
+            orderBy: {
+                observedAt: 'desc',
+            },
+        });
 
     if (!latestFreightRate) {
         throw new AppError(
@@ -87,50 +204,139 @@ async function resolveUnitFreightRate(cargo) {
         );
     }
 
+    const marketUnitRate =
+        Number(latestFreightRate.rateValue);
+
+    if (!Number.isFinite(marketUnitRate)) {
+        throw new AppError(
+            400,
+            'INSUFFICIENT_DATA',
+            'Latest observed freight rate is invalid'
+        );
+    }
+
     return {
-        unitRate: parseFloat(latestFreightRate.rateValue),
+        unitRate: marketUnitRate,
         source: 'MARKET_OBSERVATION',
     };
 }
 
+/**
+ * Compute and persist the cost estimate.
+ */
 async function computeCostEstimate(user, data) {
+    /**
+     * ------------------------------------------------------------
+     * LOAD CARGO
+     * ------------------------------------------------------------
+     */
     const cargo = await prisma.cargoRequest.findUnique({
-        where: { id: data.cargoRequestId },
+        where: {
+            id: data.cargoRequestId,
+        },
     });
 
     if (!cargo) {
-        throw new AppError(404, 'NOT_FOUND', 'Cargo request not found');
+        throw new AppError(
+            404,
+            'NOT_FOUND',
+            'Cargo request not found'
+        );
     }
 
+    /**
+     * ------------------------------------------------------------
+     * ACCESS CHECK
+     * ------------------------------------------------------------
+     */
     if (!checkCostAccess(cargo, user)) {
-        throw new AppError(403, 'FORBIDDEN', 'Insufficient permissions to estimate cost for this cargo request');
+        throw new AppError(
+            403,
+            'FORBIDDEN',
+            'Insufficient permissions to estimate cost for this cargo request'
+        );
     }
 
+    /**
+     * ------------------------------------------------------------
+     * OPTIONAL VOYAGE PLAN
+     * ------------------------------------------------------------
+     */
     let voyagePlanId = null;
+
     if (data.voyagePlanId) {
-        const voyagePlan = await prisma.voyagePlan.findUnique({
-            where: { id: data.voyagePlanId },
-        });
+        const voyagePlan =
+            await prisma.voyagePlan.findUnique({
+                where: {
+                    id: data.voyagePlanId,
+                },
+            });
 
         if (!voyagePlan) {
-            throw new AppError(404, 'NOT_FOUND', 'Voyage plan not found');
+            throw new AppError(
+                404,
+                'NOT_FOUND',
+                'Voyage plan not found'
+            );
         }
 
         if (voyagePlan.cargoRequestId !== cargo.id) {
-            throw new AppError(400, 'VALIDATION_ERROR', 'Voyage plan does not belong to this cargo request');
+            throw new AppError(
+                400,
+                'VALIDATION_ERROR',
+                'Voyage plan does not belong to this cargo request'
+            );
         }
 
         voyagePlanId = voyagePlan.id;
     }
 
-    const { unitRate, source } = await resolveUnitFreightRate(cargo);
+    /**
+     * ------------------------------------------------------------
+     * RESOLVE FREIGHT RATE
+     * ------------------------------------------------------------
+     */
+    const { unitRate, source } =
+        await resolveUnitFreightRate(cargo);
 
-    const quantityMt = parseFloat(cargo.quantityMt);
-    const freightCost = roundToMoney(unitRate * quantityMt);
+    /**
+     * ------------------------------------------------------------
+     * QUANTITY
+     * ------------------------------------------------------------
+     */
+    const quantityMt = Number(cargo.quantityMt);
 
-    // UNSPECIFIED components (fuel, port, handling, delay/demurrage,
-    // repositioning, other): documented formulas do not exist, so they are
-    // persisted as zero placeholders. No coefficients are invented here.
+    if (!Number.isFinite(quantityMt) || quantityMt <= 0) {
+        throw new AppError(
+            400,
+            'VALIDATION_ERROR',
+            'Cargo quantity must be a positive number'
+        );
+    }
+
+    /**
+     * ------------------------------------------------------------
+     * FREIGHT COST
+     * ------------------------------------------------------------
+     *
+     * REAL calculation:
+     *
+     * freightCost = forecasted freight rate × cargo quantity
+     */
+    const freightCost = roundToMoney(
+        unitRate * quantityMt
+    );
+
+    /**
+     * ------------------------------------------------------------
+     * OTHER COST COMPONENTS
+     * ------------------------------------------------------------
+     *
+     * These remain zero because there are currently no approved
+     * formulas / coefficients for them.
+     *
+     * No artificial assumptions are introduced.
+     */
     const fuelCost = 0;
     const portCost = 0;
     const handlingCost = 0;
@@ -138,7 +344,11 @@ async function computeCostEstimate(user, data) {
     const repositioningCost = 0;
     const otherCost = 0;
 
-    // DOCUMENTED (implied): total is the additive composition of components.
+    /**
+     * ------------------------------------------------------------
+     * TOTAL COST
+     * ------------------------------------------------------------
+     */
     const totalCost = roundToMoney(
         freightCost +
         fuelCost +
@@ -149,37 +359,66 @@ async function computeCostEstimate(user, data) {
         otherCost
     );
 
-    const breakdown = await prisma.costBreakdown.create({
-        data: {
+    /**
+     * ------------------------------------------------------------
+     * SAVE COST BREAKDOWN
+     * ------------------------------------------------------------
+     */
+    const breakdown =
+        await prisma.costBreakdown.create({
+            data: {
+                cargoRequestId: cargo.id,
+                voyagePlanId,
+
+                freightCost,
+                fuelCost,
+                portCost,
+                handlingCost,
+                delayCost,
+                repositioningCost,
+                otherCost,
+
+                totalCost,
+            },
+        });
+
+    /**
+     * ------------------------------------------------------------
+     * LOG RESULT
+     * ------------------------------------------------------------
+     */
+    logger.info(
+        'Cost estimate generated and saved',
+        {
+            costBreakdownId: breakdown.id,
             cargoRequestId: cargo.id,
-            voyagePlanId,
+            freightSource: source,
+            freightUnitRate: unitRate,
+            quantityMt,
             freightCost,
-            fuelCost,
-            portCost,
-            handlingCost,
-            delayCost,
-            repositioningCost,
-            otherCost,
             totalCost,
-        },
-    });
+        }
+    );
 
-    logger.info('Cost estimate generated and saved', {
-        costBreakdownId: breakdown.id,
-        cargoRequestId: cargo.id,
-        freightSource: source,
-    });
-
-    // Response-only derivation metadata (not persisted; the schema has no
-    // columns for it). Keeps the response transparent about computed vs
-    // placeholder components per BUSINESS_RULES.md data-integrity rule.
+    /**
+     * ------------------------------------------------------------
+     * RESPONSE
+     * ------------------------------------------------------------
+     *
+     * meta is response-only information.
+     * It is not persisted because the Prisma schema has no
+     * corresponding columns.
+     */
     return {
         ...breakdown,
+
         meta: {
             freightUnitRate: unitRate,
             freightSource: source,
+
             componentStatus: {
                 freight: 'COMPUTED',
+
                 fuel: ZERO_PLACEHOLDER_LABEL,
                 port: ZERO_PLACEHOLDER_LABEL,
                 handling: ZERO_PLACEHOLDER_LABEL,
@@ -191,23 +430,60 @@ async function computeCostEstimate(user, data) {
     };
 }
 
-async function getCostBreakdownsByCargoId(cargoRequestId, user) {
-    const cargo = await prisma.cargoRequest.findUnique({
-        where: { id: cargoRequestId },
-    });
+/**
+ * Get all saved cost breakdowns for a cargo request.
+ */
+async function getCostBreakdownsByCargoId(
+    cargoRequestId,
+    user
+) {
+    /**
+     * ------------------------------------------------------------
+     * LOAD CARGO
+     * ------------------------------------------------------------
+     */
+    const cargo =
+        await prisma.cargoRequest.findUnique({
+            where: {
+                id: cargoRequestId,
+            },
+        });
 
     if (!cargo) {
-        throw new AppError(404, 'NOT_FOUND', 'Cargo request not found');
+        throw new AppError(
+            404,
+            'NOT_FOUND',
+            'Cargo request not found'
+        );
     }
 
+    /**
+     * ------------------------------------------------------------
+     * ACCESS CHECK
+     * ------------------------------------------------------------
+     */
     if (!checkCostAccess(cargo, user)) {
-        throw new AppError(403, 'FORBIDDEN', 'Insufficient permissions to view cost breakdowns for this cargo request');
+        throw new AppError(
+            403,
+            'FORBIDDEN',
+            'Insufficient permissions to view cost breakdowns for this cargo request'
+        );
     }
 
-    const breakdowns = await prisma.costBreakdown.findMany({
-        where: { cargoRequestId },
-        orderBy: { createdAt: 'desc' },
-    });
+    /**
+     * ------------------------------------------------------------
+     * FETCH COST HISTORY
+     * ------------------------------------------------------------
+     */
+    const breakdowns =
+        await prisma.costBreakdown.findMany({
+            where: {
+                cargoRequestId,
+            },
+            orderBy: {
+                createdAt: 'desc',
+            },
+        });
 
     return breakdowns;
 }
